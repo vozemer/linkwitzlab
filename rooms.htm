@@ -1,0 +1,1057 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="The acoustic behavior of rooms at different frequencies. The loudspeaker's polar radiation pattern determines its interaction with the room and the accuracy of sound reproduction. Reverberation time as most important parameter for a room's acoustic behavior.">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="keywords" content="modes, resonance, bandwidth, reverberation, reflection, absorber, equalization, dipole, Schroeder frequency, reverberation distance, critical distance, multi-channel, reference level, mode density">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Room Acoustics</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="index.htm" background="images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="index.htm"><img border="0" src="_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="LXmini/LXmini+2.htm"><img border="0" src="images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="LXmini/LXstudio.htm"><img border="0" src="images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="LX521/LX521_4.htm"><img border="0" src="_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="LX521/LX521_4.htm"><img border="0" src="images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="orion_challenge.htm"><img border="0" src="_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="orion_asp.htm"><img border="0" src="images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="Pluto/electronics.htm"><img border="0" src="_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="Pluto/Pluto-2.1.htm"><img border="0" src="images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif" align="center"><a href="about_me.htm"><img border="0" src="images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="Removed&#32;pages/x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="dpp/introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#FF0000">Room Acoustics</font></h1>
+<p><font face="Arial">----&nbsp; <b>Theory</b>&nbsp; ----&nbsp; <a
+href="best_rooms.htm">The best rooms</a>&nbsp; ----&nbsp; <a
+href="listening_room.htm">The listening room</a>&nbsp; </font><font face="Arial">----&nbsp;
+<a href="ALMA'14/Sound_quality.htm">Whatever happened</a>&nbsp; ----</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#008080">Theory</font></h1>
+<p><font face="Arial"><a href="rooms.htm#A">A -</a> Introduction</font></p>
+<p><font face="Arial"><a href="rooms.htm#B">B -</a> Loudspeaker directivity and room
+response</font></p>
+<p><font face="Arial"><a href="rooms.htm#C">C -</a> Room reverberation time T60<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C1">C1</a> - Sound waves between two walls<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C2">C2</a> - Sound waves in a rectangular, rigid
+room<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C3">C3</a> - Reverberation distance<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C4">C4</a> - Rooms for multi-channel sound<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C5">C5</a> - Amplifier power to obtain Reference
+Level<br>
+&nbsp;&nbsp;&nbsp; <a href="rooms.htm#C6">C6</a> - Room response time</font></p>
+<p><font face="Arial"><a href="rooms.htm#D">D -</a> Loudspeaker and listener placement</font></p>
+<p><font face="Arial"><a href="Watson/watson.htm">WATSON - Stereo Enhancement
+Loudspeakers</a> as a merging of room acoustics and auditory perception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<h2><a name="A"><font face="Arial" color="#008080">A</font></a> <font face="Arial" color="#008080"> - Introduction</font></h2>
+<p><font size="3" face="Arial">Much has been written in the popular and
+professional audio press about the acoustic treatment of rooms. The purpose of
+such treatment is to allow us to hear more of the loudspeaker and less of the
+room. I am convinced that a properly designed sound system can perform well in a
+great variety of rooms and requires only a minimum of room treatment if any at
+all.</font></p>
+<p><font size="3" face="Arial">To understand this claim let's look at the
+typical acoustic behavior of domestic size listening rooms, which have linear dimensions
+that are small compared to the 17 m wavelength of a 20 Hz bass tone, but are
+acoustically large when compared to a 200 Hz or 1.7 m wavelength midrange tone (G<sub>1</sub> on the
+piano keyboard).&nbsp;</font></p>
+<p><font size="3" face="Arial">Below 200 Hz the acoustics of different locations
+in the room are dominated by discrete resonances. Above 200 Hz these resonances
+become so tightly packed in frequency and space that the room behaves quite
+uniformly and is best described by its reverberation time RT60 (<a href="publications.htm">Ref.
+1</a>).</font></p>
+<p><font size="3" face="Arial">Room treatment can be very effective above 200
+Hz, but the same result may be obtained more aesthetically with ordinary
+furnishings, wall decoration, rugs on the floor and the variety of stuff we like
+to surround ourselves with. How much treatment is needed, or how short the
+reverberation time should be, depends on the polar radiation characteristics of
+the loudspeaker. For my open baffle speaker designs a room becomes too dead when
+its RT60 falls below 500 ms.</font></p>
+<p><font size="3" face="Arial">We can think of sound as propagating like a light
+ray. Thus, we can use a mirror to find the region on the side wall or ceiling
+where sound from the speaker might be reflected towards the preferred listening
+location. It depends on driver, crossover and baffle design, i.e. the polar
+radiation pattern, whether the region so found is illuminated by sound to any
+significant degree. If so, then a variety of commercial surface coverings are
+available to scatter and/or absorb the offending reflection.</font></p>
+<p><font size="3" face="Arial">The acoustically most problematic frequency range
+is below 200 Hz, because of the spatially and frequency wise irregular
+distribution of room resonances. Many computer programs have been written that
+calculate the resonant modes of a given room and recommend optimum loudspeaker
+and listener placements. Usually, real rooms are much more complex than the
+calculated models. Walls are not infinitely stiff, rooms have windows, doors,
+openings, suspended floors or ceilings, etc. In addition, it is the polar
+pattern and the acoustic source impedance of the given loudspeaker that
+determines which of the potential room modes are actually excited and to which
+degree. The usefulness of such programs is marginal at best. Likewise,
+recommended proportions for room length, width and height should not be taken
+more seriously than other proportions that may be based on visual aesthetics.</font></p>
+<p><font size="3" face="Arial">The conventional closed or vented box design,
+that is used for the majority of loudspeakers on the market, contributes
+significantly to the room problems below 200 Hz. These designs are
+omni-directional radiators and they tend to excite a maximum number of room
+resonances, particularly when located in room corners. While this adds to the
+perceived bass output at certain frequencies, it can lead to a falsification of
+the recorded material, namely when the room resonance decays more slowly than
+the original sound. In general, the low frequency response of omni-directional
+speakers in small rooms is quite non-uniform. Attempts to treat the room with
+absorbers will make only marginal differences unless very many absorbers or
+large absorbing surfaces are used. It is best to attenuate peaks in the bass
+response with parametric equalization. Holes in the response cannot be filled in
+(<a href="publications.htm">Ref. 1</a>).</font></p>
+<p><font size="3" face="Arial">By far the perceptually most uniform response in the range
+below 200 Hz is obtained with an open-baffle, dipole or figure-of-eight
+radiating source. Because of its directionality, the dipole excites far fewer
+room resonances than an omni-directional source. The measured room response is
+not necessarily any smoother than that for an omni-directional source. But the
+perceived difference in bass
+reproduction is startling at first, because we are so used to hearing the
+irregular and booming bass of the typical box speaker in acoustically small
+rooms. Quickly one learns to recognize the <a href="reproduction.htm">distortion</a>
+of this combination and it becomes intolerable.</font></p>
+<p><font size="3" face="Arial">For evaluating a given room and loudspeaker
+combination a <a href="burst-cd.htm">CD</a> is available. It contains unique sound
+tracks to identify room resonances and their effect upon the clarity of sound
+reproduction. Many of the tests require no instrumentation other than your ears.</font></p>
+<p><font size="3" face="Arial"><a href="links.htm#Ripple tank">A ripple tank
+experiment</a> illustrates wave propagation and reflection in a single plane and
+gives an indication of the complexity of sound propagation in acoustically small
+spaces like living rooms.&nbsp;</font></p>
+<p><font face="Arial">Also see and listen to a talk about &quot;Accurate sound
+reproduction from two loudspeakers in a living room&quot; under <a href="publications.htm#23">Publications
+#23</a> and read the &quot;<a href="stereo&#32;reproduction.htm">Room optimized</a>
+stereophonic sound reproduction&quot; page.)</font></p>
+<p><font size="3" face="Arial">
+<a href="rooms.htm#Room">Top</a></font></p>
+<p>&nbsp;</p>
+<h2><a name="B"><font face="Arial" color="#008080">B</font></a> <font face="Arial" color="#008080"> - <a name="Loudspeaker directivity">Loudspeaker directivity</a> and room response</font></h2>
+<p><font face="Arial">When a loudspeaker is placed in a room we hear both its
+direct sound, i.e. the sound which arrives via the shortest path, and the room
+sound due to the resonances, reverberation and reflections caused by the
+boundaries of the room and the objects in it. The two sounds superimpose and
+influence our perception of timbre, timing and spatial location of the virtual
+sound source. Thus, the off-axis radiation of the speaker has great influence on
+the naturalness of sound reproduction even when you listen on-axis and the more
+so, the further you sit away from the speaker.</font></p>
+<p><font face="Arial">Two basic and fundamentally different sources of sound are
+the monopole and the dipole radiator. The ideal monopole is an acoustically
+small pulsating sphere, and the ideal dipole is a back and forth oscillating
+small sphere. The monopole radiates uniformly into all directions, whereas the
+dipole is directional with distinct nulls in the plane vertical to its axis of
+oscillation. The 3-dimensional radiation or polar pattern of the monopole is
+like the surface of a basketball, the dipole's is like two ping-pong balls
+stuck together. At +/-45 degrees off-axis the dipole response is L = cos(45) =
+0.7 or 3 dB down, the monopole is unchanged with L = 1.&nbsp;<a href="images/graphics/radpat1.gif"><br>
+<br>
+</a></font><img border="0" src="images/graphics/polar1.gif" width="572" height="574"></p>
+<p><font face="Arial">The graph above shows characteristic radiation patterns of
+different sound sources for very low, mid and high frequencies and with flat
+on-axis response.&nbsp;<a href="images/graphics/radpat1.gif"><br>
+Practical loudspeakers</a>
+are neither pure monopoles nor pure dipoles except at low frequencies where the
+acoustic wavelengths are large compared to the cabinet dimensions.</font></p>
+<p><font face="Arial">The ideal monopole is omni-directional at all frequencies.
+Very few speaker designs on the consumer market approach this behavior. This
+type of speaker illuminates the listening room uniformly and the perceived sound
+is strongly influenced by the room's acoustic signature. The result can be quite
+pleasing, though, because a great deal of acoustic averaging of the sound
+radiated into every direction takes place. The speakers tend to disappear
+completely in the wide sound field. Unfortunately, the direct sound is
+maximally masked by the room sound and precise imaging is lost, unless the
+listening position is close to the speakers.</font></p>
+<p><font face="Arial">The typical box speaker, whether vented, band-passed or
+closed, is omni-directional at low frequencies and becomes increasingly
+forward-directional towards higher frequencies. Even when flat on-axis, the
+total acoustic power radiated into the room drops typically 10 dB (10x) or more
+between low and high frequencies. The uneven power response and the associated
+strong excitation of low frequency room modes contributes to the familiar (and
+often desired :-( ) generic box loudspeaker sound. This cannot be the avenue to
+sound reproduction that is true to the original.</font></p>
+<p><font face="Arial">The directional response of the ideal dipole is obtained
+with open baffle speakers at low frequencies. Note, that to obtain the same
+on-axis sound pressure level as from a monopole, a dipole needs to radiate only
+1/3rd of the monopole's power into the room. This means 4.8 dB less contribution
+of the room's acoustic signature to the perceived sound. It might also mean 4.8
+dB less sound for your neighbor, or that much more sound to you. Despite this
+advantage dipole speakers are often not acceptable, because they tend to be
+constructed as physically large panels that interfere with room aesthetics, and
+they seem to suffer from insufficient bass output, critical room placement and a
+narrow &quot;sweet spot&quot;.</font></p>
+<p><font face="Arial">These claims are true to varying degree depending on the
+specific design of a given panel loudspeaker. Because of the progressive acoustic short
+circuit between front and rear as the reproduced signal frequency decreases, the membrane of an open-baffle speaker has to
+move more air locally than the driver cone of a box speaker for the same SPL at
+the listening position. This demands a large radiating surface area, because
+achievable excursions are usually small for electrostatic or magnetic panel
+drive. The obtained volume displacement limits the maximum bass output.
+Non-linear distortion, though, is often much lower than for dynamic drivers.
+Large radiating area means that the panel becomes multi-directional with
+increasing frequency which contributes to critical room placement and listening
+position.</font></p>
+<p><font face="Arial"><a name="If the open-baffle">If the open-baffle</a> speaker is built with conventional cone
+type dynamic drivers of large excursion capability, then adequate bass output
+and uniform off-axis radiation are readily obtainable in a package that is more
+acceptable than a large panel, though not as small as a box speaker. Such
+speakers were built by Audio Artistry Inc. and a DIY project is described on
+this web site in the PHOENIX pages. This type of speaker has a much more
+uniform power response than the typical box speaker. Not only is its bass output
+in proportion to the music, because room resonance contribution is greatly
+reduced, but also the character of the bass now sounds more like that from real
+musical instruments.&nbsp;My hypothesis is that three effects combine to produce
+the greater bass clarity:<br>
+1 - An open baffle, dipole speaker has a figure-of-eight radiation pattern and
+therefore excites fewer room modes.<br>
+2 - Its total radiated power is 4.8 dB less than that of a monopole for the same
+on-axis SPL. Thus the strength of the excited modes is less.&nbsp;<br>
+3 - A 4.8 dB difference in SPL at low frequencies is quite significant, due to
+the bunching of the equal loudness contours at low frequencies, and corresponds
+to a 10 dB difference in loudness at 1 kHz.<br>
+Thus, bass reproduced by a dipole would be less masked by the room, since a
+dipole excites fewer modes, and to a lesser degree, and since the perceived
+difference between direct sound and room contribution is magnified by a
+psychoacoustic effect.,&nbsp;</font></p>
+<p><font face="Arial">The off-axis radiation behavior of a speaker determines
+the degree to which speaker placement and room acoustics degrade the accuracy of
+the perceived sound. Worst in this respect is the typical box speaker, followed
+by the large panel area dipole and the truly omni-directional designs. Least
+affected is the sound of the open-baffle speaker with piston drivers. (<a href="publications.htm">Ref.1</a>)&nbsp;</font></p>
+<p><font face="Arial">Often concern is expressed over the fact that the <a name="rear radiation">rear
+radiation</a> from a dipole is out of phase with the front radiation, and that
+thus any sound reflected from a wall behind the speaker would cancel sound
+coming from the front of the speaker. Cancellation can only occur when direct
+and reflected sounds are exactly of opposite phase (180 degrees) and of the same
+strength. Since direct and reflected sounds travel paths of different length,
+they undergo different amounts of phase shift. Thus, the phase and magnitude
+conditions for cancellation are given only at certain frequencies, if at all. At
+some other frequencies direct and reflected sounds will add. The same also
+applies to a monopole speaker in front of a wall. The only difference is in the
+frequencies for which addition and subtraction occur. The best remedy is to move
+the speaker away from the wall, or to make the wall as sound absorptive or
+diffusive as possible. (<a href="faq.htm#Q31">FAQ31</a>)<br>
+</font><font size="3" face="Arial"><a href="rooms.htm#Room">Top</a></font></p>
+<p>&nbsp;</p>
+<h2><a name="C"><font face="Arial" color="#008080">C</font></a> <font face="Arial" color="#008080"> - Room <a name="reverberation time"> reverberation time</a> T60</font></h2>
+<p><font face="Arial">Reverberation time is the single most important parameter
+describing a room's acoustic behavior. The following discussion might get a
+little technical but will illustrate how sound builds up and decays in a room
+and the effect it has upon clarity of reproduction.</font></p>
+<p><font face="Arial"><b><a name="C1">C1</a> - Sound waves between two walls<br>
+</b>Take the example of a speaker in a wall and a second wall at distance L in
+front of it. As the cone vibrates it will send out an acoustic wave which gets
+reflected back by the second wall, returns to the first wall, gets reflected
+again back to the second wall and so on. If the frequency of vibration is such
+that the distance L corresponds to half of a wavelength, then the cone movement
+is in phase with the reflected wave and the sound pressure keeps building up.
+Eventually an equilibrium is reached between the energy supplied by the cone
+movement and the energy absorbed by the two walls and the air in between.</font></p>
+<p><img border="0" src="images/graphics/room1.gif" width="488" height="214"></p>
+<p><font face="Arial">This is a standing wave resonance or mode condition and if
+we change the frequency of cone vibration, we trace out the resonance curve that
+is typical for any simple system containing mass, compliance and </font><font face="Arial">energy
+loss. As frequency is increased another resonance occurs when L equals to a full
+wavelength, to 3/2 wavelengths, 4/2 and so on. The lowest possible frequency
+is&nbsp;</font></p>
+<p><font face="Arial">f<sub>min</sub> = c / (2 L)&nbsp; Hz,&nbsp; where c=343
+m/s&nbsp;&nbsp;&nbsp; (1)</font></p>
+<p><font face="Arial">If the excitation is applied as a step function, then the
+sound pressure will rise from 10% to 90% of its steady-state level within a time</font></p>
+<p><font face="Arial">T<sub>rise</sub> = 0.7 / BW&nbsp;&nbsp;&nbsp; (2)&nbsp;</font></p>
+<p><font face="Arial">where BW is the width of the resonance curve in Hz at the
+half power (-3 dB) level. The SPL will decay to one thousand's (-60 dB) of its
+full level after a time&nbsp;</font></p>
+<p><font face="Arial">T<sub>60</sub> = 2.2 / BW&nbsp;&nbsp;&nbsp; (3)</font></p>
+<p><font face="Arial">The quality factor or Q of the resonance is&nbsp;</font></p>
+<p><font face="Arial">Q = n f<sub>min</sub> / BW&nbsp;&nbsp;
+(4)&nbsp;&nbsp;&nbsp;&nbsp; with n = 1, 2, 3, etc.</font></p>
+<p><font face="Arial"><u>Example 1</u>&nbsp;<br>
+L=25 ft (7.63 m), then&nbsp;</font><font face="Arial"> f<sub>min</sub> =
+343/(2*7.63) = 22.5 Hz and no resonance below this frequency. The next higher
+resonance will be at 45 Hz, then 67.5 Hz, 90 Hz, 112.5 Hz and so on.<br>
+</font><font face="Arial">If we had measured T<sub>rise</sub> = 202 ms at 45 Hz,
+then from (2)&nbsp; BW = 0.7/0.202 = 3.5 Hz and T<sub>60</sub> = 2.2/3.5 = 630
+ms from (3).<br>
+Q = 45/3.5 = 12.9 and if T<sub>60</sub> stays constant with increasing
+frequency, then Q increases, for example Q = 112.5/3.5 = 32.1</font></p>
+<p><font face="Arial"><b><a name="C2">C2</a> - <a name="Standing waves">Standing waves</a> in a rectangular, rigid room<br>
+</b>In a rectangular room we have six surfaces and the number of possible
+standing waves is much larger than for the two wall example. The frequencies at
+which they can occur are calculated from</font></p>
+<p><font face="Arial">f = ( c / 2 ) [ ( l / L )<sup>2</sup> + ( w / W )<sup>2</sup>
++ ( h / H )<sup>2</sup> ]<sup>1/2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+[Hz]&nbsp;&nbsp;&nbsp;&nbsp; (5)</font></p>
+<p><font face="Arial">l, w, h = 0, 1, 2, 3 etc.</font></p>
+<p><font face="Arial">See <a href="modes1.xls" target="_blank">modes1.xls</a>, a spreadsheet for
+calculating and plotting room modes and other room parameters discussed here.&nbsp;</font></p>
+<p><font face="Arial">At frequencies <a name="below" href="images/graphics/enclosure-spl.gif"> below the lowest room resonance</a> the sound
+pressure will increase at a rate of 12 dB/oct for a closed box speaker that is
+flat under anechoic conditions, assuming that the room is completely closed and
+its surfaces are rigid. This case has some significance for the interior of
+automobiles. Under the same circumstances the sound from a dipole speaker will
+stay flat.&nbsp;<br>
+Domestic listening spaces are seldom completely closed, nor are sheet rock walls
+rigid, making a prediction of very low frequency in-room response extremely
+difficult.</font></p>
+<p><font face="Arial"><b>Note:</b> Calculations of room modes, though popular, are not
+practical for
+predicting optimum speaker placement or listener position. For this one would
+need to calculate the transfer function between speaker and listener. The
+transfer function is related to the room modes, but much more difficult to
+determine. Never-the-less, room mode calculations are often invoked to predict
+&quot;optimum&quot; room dimensions. They fail to take into account any
+specifics about speaker placement, source directivity and source type (monopole
+vs. dipole) that determine which modes are excited, and in combination with the
+absorption properties of different room surfaces, to which degree these
+resonances build up. Some people think that by making the room other than rectangular or
+using curved surfaces, that they can eliminate standing waves. They merely
+change frequencies, shift their distribution and make their calculation a lot
+more difficult.</font></p>
+<p><font face="Arial">Room modes can be identified by peaks and dips in the
+frequency response of the acoustic transfer function between speaker and
+listening position, though only at low frequencies (&lt;150 Hz) where their
+density is not too high. Such measurements are location dependent and are
+difficult to interpret as to their audible effect. Listening to a <a href="images/graphics/mlt-bst1.gif">multi-burst
+test signal</a> at different frequencies gives audible indication of which room
+locations and frequency regions suffer the greatest degradation in the
+articulation of bass sounds (<a href="publications.htm">Ref.1</a>). With this
+information in hand it is then possible to identify and electronically equalize
+the worst offenders in the acoustic transfer function response.</font></p>
+<p><font face="Arial">Several room parameters can be calculated that give
+insight into the general behavior of a closed space.&nbsp;</font></p>
+<p><font face="Arial">The number of modes N between zero and a given upper
+frequency limit f<sub>m</sub> can be estimated (H. Kuttruff, Room Acoustics,
+1991) from</font></p>
+<p><font FACE="Arial">N = (4</font><font FACE="Symbol"> p / </font><font FACE="Arial">3)
+V (f<sub>m</sub>/c)<sup>3</sup> + (</font><font FACE="Symbol">p </font><font FACE="Arial">/
+4) S (f<sub>m</sub> /c)<sup>2</sup> + (1 / 8) L<sub>e</sub> (f<sub>m</sub>
+/c)&nbsp;&nbsp;&nbsp; (6)</font></p>
+<p><font face="Arial">where<br>
+V = L W H&nbsp;&nbsp;&nbsp;&nbsp; [m<sup>3</sup>]<br>
+S = 2 ( L W + L H + W H )&nbsp;&nbsp;&nbsp;&nbsp; [m<sup>2</sup>]<br>
+L<sub>e</sub> = 4 ( L + W + H )&nbsp;&nbsp;&nbsp;&nbsp; [m]<br>
+p = pi = 3.14...</font></p>
+<p><font face="Arial">The number of modes increases very rapidly with frequency
+and they move ever more closely together. Their average separation at f<sub>m</sub>
+is</font></p>
+<p><font FACE="Symbol">d</font><font FACE="Arial">f = c<sup>3</sup> / ( 4</font><font FACE="Symbol">
+p </font><font FACE="Arial">V f<sub>m</sub><sup>2</sup>
+)&nbsp;&nbsp;&nbsp;&nbsp; [Hz]&nbsp;&nbsp;&nbsp;&nbsp; (7)</font></p>
+<p><font face="Arial"><u>Example 2</u><br>
+Take a room with L = 25', W = 16' and H = 9' (7.62m x 4.88m x 2.74m), then<br>
+V = 3600 ft<sup>3</sup> = 102 m<sup>3</sup><br>
+S = 1537 ft2 = 143 m<sup>2</sup><br>
+L<sub>e</sub> = 200 ft = 61 m<br>
+Below f<sub>m</sub> = 100 Hz, 200, 300 and 400 Hz the number of modes N and
+their average separation </font><font face="Symbol">d</font><font face="Arial">f
+at f<sub>m</sub> are respectively&nbsp;</font></p>
+<table border="1" width="38%">
+  <tr>
+    <td width="39%" align="center"><font face="Arial">f<sub>m</sub></font></td>
+    <td width="35%" align="center"><font face="Arial">N</font></td>
+    <td width="40%" align="center"><font face="Symbol">d</font><font face="Arial">f</font></td>
+  </tr>
+  <tr>
+    <td width="39%" align="center"><font face="Arial">100 Hz</font></td>
+    <td width="35%" align="center"><font face="Arial">22</font></td>
+    <td width="40%" align="center"><font face="Arial">3.2 Hz</font></td>
+  </tr>
+  <tr>
+    <td width="39%" align="center"><font face="Arial">200 Hz</font></td>
+    <td width="35%" align="center"><font face="Arial">126</font></td>
+    <td width="40%" align="center"><font face="Arial">0.8 Hz</font></td>
+  </tr>
+  <tr>
+    <td width="39%" align="center"><font face="Arial">300 Hz</font></td>
+    <td width="35%" align="center"><font face="Arial">375</font></td>
+    <td width="40%" align="center"><font face="Arial">0.4 Hz</font></td>
+  </tr>
+  <tr>
+    <td width="39%" align="center"><font face="Arial">400 Hz</font></td>
+    <td width="35%" align="center"><font face="Arial">832</font></td>
+    <td width="40%" align="center"><font face="Arial">0.2 Hz</font></td>
+  </tr>
+</table>
+<p><font face="Arial">If we assume that the modes in this room decay at T<sub>60</sub>
+= 630 ms, then each resonance occupies a 3 dB bandwidth BW = 3.5 Hz from (3)
+above. Somewhere between 100 Hz and 200 Hz the average separation </font><font face="Symbol">d</font><font face="Arial">f
+between modes is 1.2 Hz and thus 3 modes fall within the 3.5 Hz bandwidth
+resulting from T<sub>60</sub>. This occurs at&nbsp; fs = 157 Hz as calculated
+from the simple formula for 3 overlapping modes per BW:</font></p>
+<p><font face="Arial">f<sub>s</sub> = 2000 ( T<sub>60</sub> / V )<sup>1/2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+[Hz]&nbsp;&nbsp;&nbsp;&nbsp; (8)</font></p>
+<p><font face="Arial">The frequency f<sub>s</sub> is also called the <b><a
+name="Schroeder frequency"> Schroeder
+frequency</a></b> and denotes approximately the boundary between reverberant room
+behavior above and discrete room modes below.</font></p>
+<p><font face="Arial">The sound decay time or reverberation time T<sub>60</sub>
+is related to the average wall absorption coefficient </font><font face="Symbol">a</font><font face="Arial">
+by Sabine's formula</font></p>
+<p><font FACE="Arial">T<sub>60</sub> = 0.163 V / ( S </font><font FACE="Symbol">a</font><font FACE="Arial">
+)&nbsp;&nbsp;&nbsp;&nbsp; [s]&nbsp;&nbsp;&nbsp;&nbsp; (9)</font></p>
+<p><font face="Symbol">a</font><font face="Arial"> = 18%&nbsp; for the Example 2
+room with T<sub>60</sub> = 630 ms.&nbsp;</font></p>
+<p><font face="Arial">A <a href="burst-cd.htm">CD</a> containing unique test
+signals is available. It allows to evaluate the effect of room modes upon the
+clarity of sound reproduction.</font></p>
+<p><font face="Arial"><b><a name="C3">C3</a> - <a name="Reverberation distance">Reverberation distance</a><br>
+</b>When we consider radiation in the reverberant frequency range above 149 Hz,
+the sound at the listening position is composed of the direct sound from the
+source and the reverberant sound that is more or less uniformly distributed in
+the room. The direct sound pressure level decreases inversely to distance from
+the source and will equal the reverberant sound pressure at distance x<sub>r</sub>.
+The ‘reverberation distance’ x<sub>r </sub>(also called 'critical distance')
+is calculated from</font></p>
+<p><font face="Arial">x<sub>r</sub> = 0.1 ( G V / (</font><font face="Symbol">p</font><font face="Arial">
+T<sub>60</sub>) )<sup>1/2</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+[m]&nbsp;&nbsp;&nbsp;&nbsp; (10)</font></p>
+<p><font face="Arial">where the directionality gain G is unity for a monopole
+and G = 3 for a dipole radiator. A dipole, thus, has a 3<sup>1/2</sup> = 1.73
+times larger reverberation distance.</font></p>
+<p><img border="0" src="images/graphics/room2.gif" width="488" height="195"></p>
+<p><font face="Arial">A typical reverberation distance is actually quite small,
+0.72 m (2.4 ft) for the monopole and 1.24 m (4.1 ft) for the dipole in the
+example room. Never-the-less,&nbsp; the ratio of direct sound L<sub>d</sub> to
+reverberant sound pressure level L<sub>r</sub> is 4.8 dB greater for the dipole
+than for a monopole with the same direct sound output.&nbsp; Thus, at 3 m
+distance from the source, the direct sound would be 20*log(3/0.72) = 12.4 dB
+below the reverberant sound field for the monopole and only 20*log(3/1.24) = 7.7
+dB below it for the dipole.&nbsp;</font></p>
+<p><font face="Arial">The 4.8 dB lower level of the reverberant field in the
+case of the dipole significantly reduces the masking influence of the room upon
+sonic detail. It eliminates the sensation of overload of the room during loud
+passages of program material and makes your listening sessions much less noisy
+to your neighbors.&nbsp;<br>
+You have often experienced the poor intelligibility of spoken words from PA
+systems in enclosed public spaces. Usually a central cluster of loudspeakers
+aims at the audience. In reality the speakers are not very directional and too
+much sound is radiated towards useless spaces, only to bounce around and raise
+the reverberant sound level. It does not help to increase the volume to obtain
+more direct sound, because it also raises the reverberant sound level. Speech
+modulation gets lost in this, somewhat like the loss of articulation in my <a href="images/graphics/mlt-bst1.gif">woofer
+test signal</a>.</font></p>
+<p><font face="Arial"><b><a name="C4">C4</a> - Rooms for multi-channel sound<br>
+</b>It has been suggested (R. Walker, BBC, 1998) that the reverberation time T<sub>60</sub>
+over the 200 Hz to 4 kHz frequency range be adjusted to</font></p>
+<p><font face="Arial">T<sub>60</sub> = 0.3 (V/V<sub>0</sub>)<sup>1/3</sup>&nbsp;&nbsp;
+[s]&nbsp;&nbsp;&nbsp;&nbsp; where V<sub>0</sub> = 100 m<sup>3</sup>&nbsp;&nbsp;&nbsp;
+(11)</font></p>
+<p><font face="Arial">with a tolerance of +/-50 ms which is allowed to increase
+linearly to +300 ms between 200 Hz and 63 Hz.<br>
+The room of Example 2 should thus have T<sub>60</sub> = 300 ms +/-50 ms. This
+makes for a subjectively quite dead room, which is fine if the room is dedicated
+solely to Home Theater and surround sound, but is in my opinion a very
+overstuffed environment for normal living. It has the effect of making the
+reverberation distance x<sub>r</sub> = 1.04 m for the monopole and x<sub>r</sub>
+= 1.8 m for the dipole. At a viewing/listening distance of 2 m the direct sound
+is only about 6 dB below the reverberant level of the monopole which is good for
+sound clarity.&nbsp;<br>
+Instead, you could use a dipole, increase T<sub>60</sub> to a much more livable
+600 ms and have the same direct-to-reverberant ratio as for the monopole for
+which the specification was developed.</font></p>
+<p><font face="Arial"><b><a name="C5">C5</a> - Amplifier power to obtain Reference Level<br>
+</b>When you know the equivalent sensitivity L<sub>s</sub> of your speaker in dB SPL at 1 W
+(2.83 V across 8 ohm) and 1 m distance and the reverberation time T<sub>60</sub> of your room, then
+you can estimate the amount of power P<sub>ref</sub>&nbsp; required to obtain a
+specified reference level L<sub>ref</sub>&nbsp; at the listening distance x<sub>l</sub>.
+First calculate the reverberation distance x<sub>r</sub> from (10). Then the
+level of the reverberant field for 1 W into the speaker is</font></p>
+<p><font face="Arial">L<sub>r(1W)</sub> = L<sub>s</sub> - 20 log(x<sub>r</sub>)&nbsp;&nbsp;&nbsp;
+[dB SPL]&nbsp;&nbsp;&nbsp; (12)</font></p>
+<p><font face="Arial">If the listening distance x<sub>l </sub>is greater than x<sub>r</sub>,
+then the amplifier power in dBW is&nbsp;</font></p>
+<p><font face="Arial">P<sub>ref</sub> = L<sub>ref</sub> - {L<sub>s</sub> - 20
+log(x<sub>r</sub>)}&nbsp;&nbsp; [dBW]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for x<sub>l</sub> <u>&gt;</u> x<sub>r</sub>&nbsp;&nbsp;&nbsp; (13)</font></p>
+<p><font face="Arial"><u>Example 3<br>
+</u>L<sub>s</sub> = 89 dB SPL at 1 W, 1 m<br>
+L<sub>ref </sub>= 85 dB SPL</font></p>
+<p><font face="Arial"><u>Monopole</u>:<br>
+x<sub>r</sub> = 1.04 m for T<sub>60</sub> = 300 ms<br>
+L<sub>r(1W)</sub> = 89 - 20 log(1.04) = 88.7 dB SPL<br>
+P<sub>ref</sub> = 85 - 88.7 = -3.7 dBW, equivalent to 10<sup>(-3.7/10)</sup> =
+0.4 W&nbsp;</font></p>
+<p><font face="Arial"><u>Dipole:</u><br>
+x<sub>r</sub> = 1.8 m for T<sub>60</sub> = 300 ms<br>
+L<sub>r(1W)</sub> = 89 - 20 log(1.8) = 83.9 dB SPL<br>
+P<sub>ref</sub> = 85 - 83.9 = 1.1 dBW, equivalent to 10<sup>(1.1/10)</sup> = 1.3
+W&nbsp;</font></p>
+<p><font face="Arial">With a suggested 20 dB of SPL (= 100 x power) headroom over reference
+level the monopole requires 40 W and the dipole 130 W to set up a 105 dB SPL
+reverberant sound field. The dipole's direct sound, though, is 4.8 dB higher
+than the monopole's and will be 105 - 20 log(3/1.8) = 100.6 dB SPL at 3 m
+distance. The increased clarity could be traded off for a more lively room with
+larger T<sub>60</sub> and the same 40 W amplifier power and
+direct-to-reverberant SPL ratio as for the monopole.</font></p>
+<p><font face="Arial"><b><a name="C6">C6</a> - <a name="Room response">Room response</a> time<br>
+</b>It takes time to build up the reverberant sound field in a room. Combining
+the expressions for rise time (2) and T<sub>60</sub> (3) we obtain</font></p>
+<p><font face="Arial">T<sub>rise</sub> = 0.32 T<sub>60</sub>&nbsp;&nbsp;&nbsp;
+[s]&nbsp;&nbsp;&nbsp; (14)&nbsp;</font></p>
+<p><font face="Arial">You can think of T<sub>rise</sub> as the time constant of
+the room. If music or speech varies faster than the time constant, then the room
+will not respond fully and you hear predominantly the direct sound from the
+speaker. For 630 ms reverberation time and 200 ms rise time this covers
+modulation envelopes of a sound down to 1/200ms = 5 Hz which, in my opinion, is
+preferable over the 10 Hz envelope rate of a T<sub>60</sub> = 300 ms room.&nbsp;</font></p>
+<p><font face="Arial">In all practical cases the room response time is large
+compared to the time it takes a reflected sound to reach the listener and
+therefore reflections will not be masked by the reverberant field. Depending
+upon the directivity of the source and the proximity of reflecting surfaces and
+objects specific absorptive or diffusive treatment may become necessary.&nbsp;
+It should not be overdone, though, because a certain amount of lateral
+reflection is subjectively desirable to not destroy the impression of a real
+space.<br>
+</font><font size="3" face="Arial"><a href="rooms.htm#Room">Top</a></font></p>
+<p>&nbsp;</p>
+<h2><a name="D"><font color="#008080" face="Arial">D</font></a> <font color="#008080" face="Arial"> - Loudspeaker and
+listener placement</font></h2>
+<p><font face="Arial">It is often assumed that a study of room acoustics can
+lead to highly specific loudspeaker and listener placement locations, down to
+within an inch. Other proponents are not as optimistic and recommend a 1/3rd
+rule (<a href="faq.htm#Q31">FAQ31</a>). I have come to the conclusion that real
+rooms are acoustically far too complex to predict the transmission of sound from
+speaker to listener, where the sound paths are in three dimensions, have
+direction and frequency dependent attenuation and diffusion, and can excite the
+inherent resonance modes of a room to unknown degrees.&nbsp;</font></p>
+<p><font face="Arial">From practical experience I recommend the following setups
+as starting points. They are for <a href="orion_challenge.htm">ORION</a>, a
+dipole or bi-directional loudspeaker, and for <a href="Pluto/intro.htm">PLUTO</a>,
+a monopole or omni-directional speaker. Three room sizes are considered. The 180
+ft<sup>2</sup> (17 m<sup>2</sup>) room with 8 ft (2.4 m) ceiling would seem like
+the
+absolute minimum for quality sound reproduction with the ORION. A 400 ft<sup>2</sup> (37 m<sup>2</sup>)
+or larger room with 10' (3 m) ceiling should be perfect.</font></p>
+<p><font face="Arial"><b>D1 - Dipole setup</b></font></p>
+<table border="0" width="100%" cellpadding="10">
+  <tr>
+    <td width="50%" valign="top"><font face="Arial"><img border="0" src="images/graphics/room-dipole.jpg" width="400" height="266"></font></td>
+    <td width="50%" valign="top"><font face="Arial">ORION separation is 8'. They
+      are slightly towed in. The listener is at the apex of an equilateral
+      triangle. Distance to the wall behind the speakers is 4', and to the side
+      walls 2'.</font>
+      <p><font face="Arial">The listener is only 4' from the wall behind, and
+      this might require some heavy curtains and other absorbing material on
+      that wall. As the room gets larger it expands around this triangular setup
+      and especially behind the listener. Sound should just wash by the listener
+      and disappear.&nbsp;</font></p>
+      <p><font face="Arial">The wall behind the speakers should be diffusive.
+      The rear radiation from a dipole must not be absorbed or it is no longer a
+      dipole. Similarly, the side walls should not absorb sound at the
+      reflection points but diffuse it. A dipole can even be towed in so that
+      the listener sees the radiation null axis in a wall reflection mirror.</font></td>
+  </tr>
+</table>
+<p><font face="Arial"><b>D2 - Monopole setup</b></font></p>
+<table border="0" width="100%" cellpadding="10">
+  <tr>
+    <td width="50%" valign="top"><font face="Arial"><img border="0" src="images/graphics/room-omni.jpg" width="400" height="267"></font></td>
+    <td width="50%" valign="top"><font face="Arial">PLUTO setup differs from
+      ORION. The listener sits closer to the speakers. The distance to the wall
+      behind the speakers can be slightly less, because of the uniform acoustic
+      illumination of the room. It should not be less than 3' (&lt;6 ms) to
+      separate reflection from direct sound psychoacoustically, and to preserve
+      phantom imaging.&nbsp;</font>
+      <p><font face="Arial">Sidewall reflections should be diffused if treated
+      at all. Absorbing them is like turning down the tweeter. Absorbers are not
+      broadband and ineffective below a few hundred Hz.. Besides, lateral
+      reflections are important for sound scene recognition.&nbsp;</font></p>
+      <p><font face="Arial">Again, larger rooms expand around the triangle and
+      increase&nbsp; the space more behind the listener than in front of him.</font></td>
+  </tr>
+</table>
+<p><font face="Arial"><b>D3 - <a name="Pink noise test"> Pink noise test</a></b></font></p>
+<p><font face="Arial">Listening to <a href="burst-cd.htm#Pink Noise Imaging Tests">pink noise</a> is a
+revealing test of electrical and acoustic performance of any system setup. Pink
+noise must emanate from both speakers simultaneously in dual mono fashion. A
+tightly confined phantom image should be heard half-way between the two
+loudspeakers. As you move your head left or right the sound should become
+brighter sounding and increasingly so with about a 2 inch (5 cm) periodicity as
+the lateral head displacement is increased in D1. The image also becomes
+significantly more diffuse and moves towards the nearest speaker. Pink noise
+should sound neutral and uncolored, though what that exactly means is hard to
+define. Moving around in the room the character of the noise sound should not
+change significantly with speakers like ORION and PLUTO, holding up even when
+you leave the room and listen from outside. This is not the case with
+loudspeakers that have a greatly varying polar response.&nbsp;</font></p>
+<p><font face="Arial">Listening to pink noise does not give a reliable
+indication of system performance at frequencies below 100 Hz and above 10 kHz.
+Even when pink noise is measured in 1/3rd-octave bands, the response graph is
+not a reliable indicator of speaker performance and should not be used as the
+basis for equalization. It seems so obvious that one only needs to have a flat
+frequency response at the listening position and be done. But, room response
+equalization is a very complex subject because it deals with sound in three
+dimensions of space, with time, with frequency, and with a highly evolved
+auditory stimulus processor between the two ears that is not easily fooled
+long-term. The response should not be optimized merely at the listening
+position. Few <a href="design_of_loudspeakers.htm#F">commercial products</a>
+deal with this adequately.</font></p>
+<p><font face="Arial"><b>D4 - Room analysis</b></font></p>
+<p><font face="Arial">The <a href="modes1.xls" target="_blank">modes1.xls</a>
+spreadsheet that was discussed under C above can be used to analyze the three
+hypothetical rooms and to gain some general insights. Depending upon their
+structural rigidity, their wall surface textures, floors, floor coverings and
+objects in different locations, each room will have its own unique acoustic
+signature. Broadly speaking, a room may sound live or dead. The extremes of this
+would be an unfurnished room with hard walls versus a cocktail lounge full of
+overstuffed armchairs and soft leather. Neither one would be suited for sound
+reproduction. The descriptive parameter is the average absorption coefficient of
+all surfaces and leakage paths. By definition an open window has a 100%
+absorption coefficient and if that open window covered 20% of a room's total
+surface area, then the average absorption coefficient for the room would be 20%.
+For the 180 ft<sup>2</sup> room example this would be an open window of 169 ft<sup>2</sup>
+area out of a total surface of 847 ft<sup>2</sup>. Since we usually listen with
+closed windows and very few surfaces have 100% absorption, it takes much more
+than 169 ft<sup>2</sup> to obtain an overall 20% absorption.&nbsp;</font></p>
+<p><font face="Arial">D5 - Lively rooms</font></p>
+<table border="1" width="100%">
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Floor
+      area<br>
+      ft<sup>2</sup></font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Volume<br>
+      ft<sup>3</sup></font></td>
+    <td width="10%" align="center"><font face="Arial" size="2"><b>Absorption<br>
+      %</b></font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">T60<br>
+      ms</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">F-Schroeder<br>
+      Hz&nbsp;</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb-dist<br>
+      monopole - m</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb-dist<br>
+      dipole - m</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb
+      SPL<br>
+      dipole - dB</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Direct/Reverb</font><font face="Arial" size="1"><br>
+      2.4m from dipole<br>
+      </font><font face="Arial" size="2">dB</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">1st
+      mode<br>
+      Hz</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">180</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">1443</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">20</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">452</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">200</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.54</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.93</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">0.0</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-8.2</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">37.6</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">266</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">2398</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">20</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">528</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">168</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.64</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.11</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-1.5</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-6.7</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">29.7</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">400</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">4007</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">20</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">614</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">140</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.77</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.33&nbsp;</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-3.1</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-5.1</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">22.6</font></td>
+  </tr>
+</table>
+<p><font face="Arial">D6 - Fairly dead rooms</font></p>
+<table border="1" width="100%">
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Floor
+      area<br>
+      ft<sup>2</sup></font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Volume<br>
+      ft<sup>3</sup></font></td>
+    <td width="10%" align="center"><font face="Arial" size="2"><b>Absorption<br>
+      %</b></font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">T60<br>
+      ms</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">F-Schroeder<br>
+      Hz&nbsp;</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb-dist<br>
+      monopole - m</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb-dist<br>
+      dipole - m</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Reverb
+      SPL<br>
+      dipole - dB<br>
+      </font><font face="Arial" size="1">rel to 20% Absrp</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">Direct/Reverb</font><font face="Arial" size="1"><br>
+      2.4m from dipole<br>
+      </font><font face="Arial" size="2">dB</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">1st
+      mode<br>
+      Hz</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">180</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">1443</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">40</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">226</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">141</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.76</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.31</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-3.0</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-5.3</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">37.6</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">266</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">2398</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">40</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">264</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">118</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">0.90</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.57</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-4.5</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-3.7</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">29.7</font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">400</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">4007</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">40</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">307</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">99</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.08</font></td>
+    <td width="10%" align="center"><font face="Arial" size="2">1.88</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-6.1</font></td>
+    <td width="10%" align="center" bgcolor="#FFFFFF"><font face="Arial" size="2">-2.1</font></td>
+    <td width="10%" align="center" bgcolor="#C0C0C0"><font face="Arial" size="2">22.6</font></td>
+  </tr>
+</table>
+<p><font face="Arial">The numbers in tables D5 and D6 are for hypothetical rooms
+and based on a very simple rigid rectangular room model. Though the numbers look
+precise they should only be taken as trend indicators. Note the relatively
+narrow range from 99 Hz to 200 Hz covered by the Schroeder frequency for the
+different rooms and absorptions. Below this
+frequency specific room modes can dominate, down to the 1st mode. Above that frequency the
+mode density becomes so high that a room is better described statistically by
+its reverberation time.&nbsp;For the typical home&nbsp; listening rooms with
+relatively large objects and different materials in them, reverberation time
+usually changes with frequency regions and is not as solid a descriptor as for
+concert halls. Below the first room mode the sound level becomes independent of
+location in the room and is a function of the lumped mechanical properties of
+the room. Similar to the modal region the level can be attenuated or amplified
+depending on wall surface flexures and leaky openings. The room adds to and
+subtracts from the loudspeaker's direct sound to varying degrees and in a very
+complex manner over the whole frequency range of the speaker. Thus the tables
+can only show trends above the Schroeder frequency. &nbsp;</font></p>
+<p><font face="Arial">It can be seen in D5 that the reverberant SPL in the 400
+ft<sup>2</sup> room is 3.1 dB below that of the 180 ft<sup>2</sup> room and when
+the absorption is increased to 40% in D6, it drops by another 3 dB for the same
+direct sound level. Since we judge loudness by the reverberant sound field this
+means that the volume control setting has to be increased 3.1 dB for the volume
+in the 400 ft<sup>2</sup> room to be as loud as in the 180 ft<sup>2</sup> room
+in D5, and by 6.1 dB for the more absorptive room in D6. Still, this is not much
+of an increase between the small and the large room. It confirms that ORION and
+PLUTO can be used in a wide range of room sizes, if volume levels are set for
+critical listening in the triangle seat and not for sound reinforcement at a
+large party.</font></p>
+<p><font face="Arial">Under D6 the ratio of direct to reverberant sound level is
+3 dB better than for the more lively rooms under D5 with half the absorption.
+These numbers are for the dipole which inherently is 4.8 dB (3x) better than a
+monopole. But the monopole in D2 is closer to the listener than the dipole in
+D1. Thus, in all cases the direct-to-reverberant sound ratio for this monopole
+at 6.4' (1.92 m) listening distance is only 2.8 dB worse than that for the
+dipole at 8' (2.4 m).</font></p>
+<p><font face="Arial">Despite the poorer signal-to-reverberant ratio I find more
+lively rooms preferable for music and voice reproduction. Home Theater
+installers, though, try to get rooms down to the 200 ms T60 region, which is
+difficult to accomplish for low frequencies.</font></p>
+<p><font face="Arial">Reverberation time of a listening room can be measured
+rather easily with the <a href="http://www.nti-audio.com/Home/Products/Minstruments/Acoustilyzer/tabid/60/Default.aspx" target="_blank">NTI
+Acoustilizer</a>, but a loud hand clap can tell already whether a room is live
+or dead. Rather than special products for acoustic treatment of a room I prefer
+the normal stuff of life - books, curtains, pictures, rugs, wall hangings,
+shelves, cabinets, chairs, sofas, etc. - to establish the acoustics of my living
+spaces. ORION and PLUTO+ are well adapted to such spaces which also convey a
+friendly atmosphere to most people.</font><font size="3" face="Arial"><a href="rooms.htm#Room"><br>
+Top</a></font></p>
+<p><font face="Arial">See also the <a href="Watson/watson.htm">WATSON - Stereo
+Enhancement Loudspeakers</a> as a merging of room acoustics and auditory
+perception</font></p>
+<p><font face="Arial"><br>
+</font></p>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='rooms.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>

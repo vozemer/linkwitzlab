@@ -1,0 +1,676 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="description" content="Frequency response measurement of the PHOENIX dipole loudspeaker system.">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="keywords" content="PHOENIX, crossover, equalizer, dipole, dipole woofer, microphone, preamplifier, tone-burst">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>System Test</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="index.htm" background="images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="index.htm"><img border="0" src="_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="LXmini/LXmini+2.htm"><img border="0" src="images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="LXmini/LXstudio.htm"><img border="0" src="images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="LX521/LX521_4.htm"><img border="0" src="_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="LX521/LX521_4.htm"><img border="0" src="images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="orion_challenge.htm"><img border="0" src="_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="orion_asp.htm"><img border="0" src="images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="Pluto/electronics.htm"><img border="0" src="_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="Pluto/Pluto-2.1.htm"><img border="0" src="images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif" align="center"><a href="about_me.htm"><img border="0" src="images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="Removed&#32;pages/x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="dpp/introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p>&nbsp;</p>
+<h1 align="left"><font face="Technical" color="#FF0000"><img border="0" src="images/graphics/phnx1.gif" width="180" height="33"></font></h1>
+<p align="left"><font face="Arial" size="2">| <a href="builtown.htm">Build-Your-Own</a> | <a href="m_panel.htm">Main Panel</a>
+| <a href="woofer.htm">Dipole Woofer</a> | <a href="xo_eq.htm">Crossover/EQ</a>
+| <a href="pcb.htm">Supplies</a> |<br>
+| <a href="sys_test.htm#PHOENIX System Test"><b><font color="#000000">System Test</font></b></a> | <a href="models.htm">Design
+Models</a> |</font>  <font face="Arial" size="2"><a href="proto.htm">Prototypes</a>
+| <a href="filters.htm">Active Filters</a> | <a href="surround_speaker.htm">Surround</a>
+| <a href="faq.htm">FAQ</a> |</font></p>
+
+<p>&nbsp;</p>
+<h1><a name="PHOENIX System Test">
+<font face="Arial" color="#008080">
+System Test</font></a></h1>
+<p><font face="Arial">This page gives you measured frequency response data for
+the PHOENIX system. I also added a few pointers for constructing a tone-burst signal source
+and a receiver with microphone and fast peak meter for those of you, who would
+like to build some versatile acoustic test equipment.</font></p>
+<p><font face="Arial">I must point out that steady-state frequency response
+curves - magnitude and phase - present only a limited view of a loudspeaker. Hidden in
+them, and often not discernible to the eye, are further linear distortion data.
+These are better seen in shaped tone-burst measurements in the time domain.
+Also, non-linear distortion, which adds its own signature via new spectral
+components, that were not present in the original, must be made visible with
+single and multi-tone test signals.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; Stored energy and non-linear distortion measurements were
+performed on a variety of drivers and influenced the selection made for the
+PHOENIX. The 9800 tweeter exhibits increased decay times above 12 kHz due to the
+trapped air between dome apex and plastic cup forming a mechanical spring-mass
+system. Removing the cup rapidly rolls off the response (-8 dB at 20 kHz). The
+D2905/9700 soft dome tweeter is, in these respects, a more accurate transducer
+and can be readily substituted. Regardless, the metal dome tweeter was initially
+chosen for this
+design based on a slight listening preference. I have since gone back to the
+9700 as the more accurate tweeter.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; Frequency response must also be evaluated by how it might
+generate resonances, reverberation and reflections in the playback
+venue.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; And finally, the eye and the ear do not respond in the same way. Often
+too much, in terms of audible significance, is read into the wiggles of a graphical
+presentation of the response from a single microphone to the sound pressure at a
+single point in space. On the other hand, more subtle details and broad trends
+are often overlooked. Our ear-brain system has its own value scale for sound
+perception, one that has been honed over a few millennia by what is important
+for the survival of the species.</font></p>
+<p><font face="Arial">With that precaution in mind, here is a limited set of
+data describing the frequency response of the PHOENIX system.</font></p>
+<p>&nbsp;</p>
+<h2><b><font face="Arial" color="#008080">Crossover / equalizer</font></b></h2>
+<p><font face="Arial">The crossover/equalizer corrects for trends in the
+frequency response. No attempt was made to deal with the remaining fine grain
+structure in the response, which is primarily caused by diffraction effects.
+Those were minimized by the shape of the main panel (<a href="faq.htm#Q8">FAQ8</a>). The drivers were selected
+for their inherent smooth frequency response, in addition to their low
+distortion and volume displacement capability.<b><br>
+1 </b> - Buffer output, woofer, midrange, and tweeter drive signal frequency response.&nbsp; <a href="images/graphics/x1.gif"><br>
+</a><img border="0" src="images/graphics/20x1.gif" width="408" height="284"><a href="images/graphics/x1.gif"><br>
+</a>
+Woofer and tweeter level adjustments are set to midpoint (12:00 o'clock).&nbsp; <a href="images/graphics/x1.gif">x1.gif<br>
+</a><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><u>Note 1</u> - If you
+wanted to build the PHOENIX with passive crossovers, i.e. inductor, capacitor,
+and resistor networks between power amplifier and driver terminals, then you
+would have to replicate the above frequency response curves - magnitude and phase
+(non-minimum!) - for the woofer, midrange and tweeter terminal voltages when
+measured at the output of the corresponding filter network loaded by the driver.
+This is not a trivial design task. Even if you came close with this part, there
+would still be another difference, because of the impedance seen by the drivers.
+In the active crossover/eq case each driver looks back into the very low output
+impedance of the power amplifier. This provides voltage control over the voice
+coil motion at all frequencies. In the passive case each driver sees the highly
+frequency dependent output impedance of a filter network. At larger signal
+levels, where driver non-linear distortion tends to set in, the passive and
+active systems will have sonic differences due to the impedance differences
+which affect the flow of distortion currents.&nbsp;<b><br>
+</b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u>Note 2</u> - It would be
+interesting to build the PHOENIX with current control of the drivers to
+investigate further distortion reduction. I have observed that the
+distortion products in the acoustic output spectrum of a driver are highly correlated with the
+distortion components of its voice coil current waveform, when driven from a voltage
+source. Using feedback it should be possible to linearize the voice coil current
+and thereby reduce distortion to some degree. The driver frequency responses would have to be
+re-measured under current drive conditions and the crossover/eq redesigned
+accordingly.&nbsp;<br>
+<b>
+2</b>  - Crossover/eq frequency response curves as above but without 100-200 Hz shelving
+high-pass filter and 2760 Hz
+notch filter.&nbsp;&nbsp;<a href="images/graphics/x2.gif"> x2.gif</a></font></p>
+<p>&nbsp;</p>
+<h2><b><font face="Arial" color="#008080">Main panel</font></b></h2>
+<p><font face="Arial">The main panel reproduces a frequency range of about 8
+octaves, 4 by the midrange and 4 by the tweeter.<br>
+<b>1</b> - The impedance seen by the midrange amplifier is
+about 3.5 ohm and 4.5 ohm by the tweeter amplifier. The amplifiers selected must
+be able to supply the required current without limiting and have a low output
+impedance. Connecting the 8554's in series would have given a 14 ohm impedance
+and would require large voltage swing capability from the amplifier, i.e. a high
+power rating.&nbsp; <a href="images/graphics/p1.gif">p1.gif</a><br>
+<b>2</b> - The following data were taken outdoors with the tweeter 108&quot;
+(2.74 m) above the ground and the microphone 52&quot; (1.32 m) in front of the
+tweeter to approach an echo free measurement setup.&nbsp;<br>
+In this first measurement the relative output of the drivers is seen. The
+midranges are about 12 dB higher than the tweeter. The difference is easily
+corrected with different gain settings in the active xo/eq channels.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; For a passive crossover the midranges would have to be
+connected in series to drop their output 6 dB. The remaining difference would
+have to be dissipated and reflected by the passive xo.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; The measured response curves are the result of driver
+response, panel diffraction and proximity of drivers to each other. The
+periodicity of about 1 kHz in the tweeter response is due to the panel
+width.&nbsp; <a href="images/graphics/p2.gif">p2.gif</a><br>
+<b>3</b> - The horizontal off-axis response of the midranges below 400 Hz shows the typical
+dipole cos(angle) behavior, e.g. -3 dB at 45 degrees and -6 dB at 60 degrees.&nbsp; <a href="images/graphics/p3.gif"><br>
+</a><img border="0" src="images/graphics/20p3.gif" width="410" height="284"><br>
+ Around
+700 Hz dispersion widens due to the phase of the rear radiation having been
+modified by the basket and rear cavity acoustic low-pass filter. It also causes the bump at
+500 Hz and the roll-off at 6.9 dB/oct instead of 6 dB/oct. Above 2 kHz
+dispersion narrows, but the drivers are not used in this frequency range.&nbsp; <a href="images/graphics/p3.gif">p3.gif
+</a><br>
+<b>4</b> - Horizontal off-axis response of the tweeter on the panel. Widest
+dispersion is at 4 kHz. It narrows above this frequency and shows response peaks
+around 16 kHz. These are due to the cup in front of the dome.&nbsp;<br>
+&nbsp;&nbsp;&nbsp; Caution!! A measurement like this, without any high-pass
+filter, can easily damage or destroy the tweeter and should be performed with
+adequately low amplifier power. The only safe test signal is the shaped
+tone-burst. It can actually be used at very high amplifier output voltage swings
+to hear the onset of clipping distortion and to determine the maximum SPL
+capability of a driver.&nbsp; <a href="images/graphics/p4.gif">p4.gif</a><br>
+<b>5</b> - Response of the 1400 Hz crossover between midrange and tweeter using
+the active xo/eq. There is about a two octave wide region of overlap between the
+drivers where both contribute to the total sound output.&nbsp; <a href="images/graphics/p5.gif">p5.gif</a><br>
+<b>6</b> - The off-axis response of the equalized main panel is dominated by the
+midranges at the low end and the tweeter at the high end. Note that the
+dispersion follows essentially dipole behavior up to 1400 Hz, then becomes wider
+before finally narrowing above 6 kHz.&nbsp; <a href="images/graphics/p6.gif">p6.gif</a><br>
+<b>7</b> - Effect of the 2760 notch filter upon the frequency response.&nbsp; <a href="images/graphics/p7.gif">p7.gif</a><br>
+<b>8</b> - Horizontal off-axis response with the notch filter in place.&nbsp; <a href="images/graphics/p8.gif">p8.gif</a><br>
+<b>9</b> - Off-axis response measured at a larger 86&quot; (2.18 m) distance
+from the tweeter shows smooth, well controlled behavior of the panel.&nbsp; <a href="images/graphics/p9.gif">p9.gif</a><br>
+<b>10</b> - The vertical off-axis response above and below the tweeter axis is
+dominated by the overlap region between midrange and tweeter and the relative
+spacing of the three drivers to each other. The data was taken with the
+microphone at 52&quot; (1.32 m) in front of the panel and the panel being
+lowered by 4.5&quot;, 9&quot; and 14&quot; to increase the angle from zero to 5,
+10 and 15 degrees.&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Note the relatively wide dispersion
+of the system even in the vertical plane. Never-the-less, the tweeter height
+should be at or slightly above the ear when seated. For psycho-acoustic reasons
+that I do not fully understand, one can always tell when a speaker's acoustic
+center is lower than ear height. Tilting back the speaker, as is done for some
+products, will not correct that impression. We seem to use the floor reflection
+even to localize a virtual image. It immediately sounds unrealistic to me when
+the orchestra's sound comes from below.&nbsp; <a href="images/graphics/p10.gif">p10.gif</a></font></p>
+<p>&nbsp;</p>
+<h2><b><font face="Arial" color="#008080">Dipole <a name="woofer"> woofer</a></font></b></h2>
+<p><font face="Arial">The woofer reproduces a frequency range of about 2
+octaves.<b><br>
+1</b> - The impedance seen by the woofer amplifier is
+greater than 6.5 ohm and includes the driver resonance in the cabinet. Some
+expensive tube gear has difficulty driving such load. Only solid-state
+amplifiers should be used.&nbsp; <a href="images/graphics/w1.gif">w1.gif</a><br>
+<b>2</b> - The following data were all taken outdoors on a concrete floor.&nbsp;<br>
+First, the acoustic output at the front opening plane of the floor mounted cabinet. No
+dipole diffraction effects are seen, because the microphone is too close to the
+source.&nbsp;<br>
+<img border="0" src="images/graphics/20w2.gif" width="410" height="284"><br>
+ The response follows what one would calculate (<a href="publications.htm">Ref.
+12</a>) from the impedance curve
+for a closed box woofer with a -3 dB point at 13 Hz for Qts = 0.7. It is also
+the response of the dipole woofer in the far-field, after the +6 dB/oct
+equalization has been applied.<br>
+The 270 Hz
+peak and the following dips and peaks are caused by the acoustic impedance
+mismatch between the transmission line inside the cabinet and the front opening
+into half-space. The effectiveness of the 290 Hz notch filter in attenuating the
+first peak can be seen.&nbsp; <a href="images/graphics/w2.gif">w2.gif</a><br>
+<b>3</b> - Response at the same location as above, but with 100 Hz crossover low-pass filter and +6 dB/oct dipole equalization applied.&nbsp; <a href="images/graphics/w3.gif">w3.gif</a><br>
+<b>4</b> - The crossover between woofer and midrange as measured at a horizontal
+distance of 96&quot; (2.44 m) from the panel and with the microphone on the
+ground. The tweeter height is 39&quot; (0.99 m). The measurement is influenced
+by reflections from nearby objects and by ambient noise as seen in the lower
+traces. The SPL from the midranges is doubled at the ground plane relative to
+free space.&nbsp;&nbsp; <a href="images/graphics/w4.gif">w4.gif</a><br>
+<b>5</b> - When the microphone is raised to 39&quot; the midrange output drops
+about 6 dB on average, after smoothing out the floor reflection oscillations in
+the response. By applying the 100-200 shelving high-pass filter the woofer and
+midrange levels are gradually lowered relative to the midrange at higher
+frequencies. If merely the woofer level was lowered by reducing its xo/eq gain
+by 6 dB, then a step in the frequency response around 100 Hz would result,
+because the transition from half-space to full-space sound propagation is too
+abrupt.&nbsp; <a href="images/graphics/w5.gif">w5.gif</a></font></p>
+<p align="left">&nbsp;</p>
+<h2><font face="Arial"><b><font color="#008080"><a name="Mic">Mic</a>rophone</font></b></font></h2>
+<p><img border="0" src="images/photos/test-mic2.JPG" width="488" height="385"></p>
+<p><font face="Arial">A high quality measurement and recording microphone with
+flat frequency response <a href="images/photos/mic-compare2.JPG" target="_blank"> could be
+constructed</a> using the Panasonic omni-directional back electret microphone
+cartridge WM-60AY. It was priced at
+$23.41 for 10 units(!) under <a href="http://www.digikey.com" target="_blank">Digi-Key</a>
+part number P9959-ND, but is now obsolete. A replacement is the <a href="http://www.panasonic.com/industrial/components/pdf/em06_wm61_a_b_dne.pdf" target="_blank">WM-61A</a>
+(P9925-ND).<br>
+When the cartridge is connected as described by Panasonic it produces fairly
+high distortion at moderate SPL's and is marginally suitable for serious
+recording and measurement purposes. The microphone itself is extremely linear,
+but the built in FET amplifier stage is not configured optimally.&nbsp;&nbsp;</font></p>
+<p><font face="Arial">Fortunately, is it possible to modify the external
+connection to the FET. This involves some delicate work of cutting a trace on the tiny pcb
+in back of the cartridge and soldering thin, flexible wires to the standard two
+hookup points, and making a different connection to the capsule housing. The pcb
+has a circular ring of copper on its outside, which can be exposed by shaving
+off a small section of the aluminum roll surround with a sharp blade. Then
+solder a wire from the copper ring to the hookup point that was originally the
+positive capsule terminal and make it the new ground wire. The terminal with the
+cut trace becomes the new active output. You might sacrifice
+some cartridges while learning the process. It is important not to overheat the
+cartridge when soldering the wires to it, because it destroys the electret.
+Also, after wires have been connected, the whole backside should be covered with
+Silicone II Glue to avoid low frequency roll-off due to a broken air seal which
+might have been caused by the modification. Heat shrink tubing can be used to
+attach the capsule to a wooden dowel, or the capsules can be glued into the end
+of a 1/4 inch ID thin metal pipe. Look at the <a href="images/graphics/microph1.gif" target="_blank">microph1.gif</a>&nbsp;
+page from my notebook for further details.&nbsp;</font></p>
+<p><font face="Arial">
+The output voltage from the modified WM-60AY capsule can swing 5 Vpp (!) max at
+141 dB SPL using a -9 V supply, and easily overload a preamplifier with too much
+gain.&nbsp;The microphone noise floor measures about 36 dB SPL, 80 Hz to 20 kHz, with a 1/f
+corner of around 100 Hz. With a sensitivity of 8 mV/Pa (= 94 dB SPL) this
+translates to 10 uV of noise, or 71 nV/sqrt(Hz) noise voltage density. A-weighted noise is estimated as 30
+dB(A). By comparison the equivalent input noise voltage of the OPA2134 opamp is
+8 nV/sqrt(Hz), corresponding to the noise voltage from a 3000 ohm resistor at
+room temperature. Thus the opamp noise will be swamped by the microphone noise
+as long as the opamp bias and feedback resistor values are not too large.</font></p>
+<p><img border="0" src="images/photos/mic-amp.jpg" width="500" height="270"><br>
+<font face="Arial"><br>
+The above circuit provides buffering of the relatively high output impedance
+(1-2 kohm) of the microphone capsule. At 140 dB SPL the output voltage is 4 Vrms
+or 11.2 Vpp and will not clip with a +/-9 V battery supply. Such high SPL levels
+could be approached when measuring close to the radiating surface of a driver
+during non-linear distortion tests. The input blocking capacitor can be a small
+size polar capacitor (Tantalum) because of the applied 9 V bias voltage. The two 200 ohm resistors define the output
+impedance, provide opamp protection and maintain balance for the XLR connection.
+Output DC blocking capacitors (e.g. 2.2 uF, 50 V, non-polar capacitors for
+forming a 7 Hz highpass filter in conjunction with a 10k ohm input impedance) may be needed in series with
+each of the two 200 ohm resistors, if the connected equipment has no input
+blocking capacitors or if it puts out phantom power. A single OPA134 or other
+opamps could be used, a LED could be added to indicate power on/off. If the lead
+length from the batteries to the opamp is within a few inch, then no supply
+bypass capacitors are necessary, but if an AC derived supply is used, then 0.1
+uF capacitors should be placed from the opamp supply pins to ground. Batteries
+are preferred, because such supply could cause hum problems due to ground
+loops.&nbsp;&nbsp;</font></p>
+<p>
+<font face="Arial">
+<a name="Lyman Miller">
+A more sensitive capsule</a> with a few dB lower noise of 26 dB(A) is the <a href="http://www.panasonic.com/industrial/components/pdf/em06_wm61_a_b_dne.pdf" target="_blank">WM-61A</a>. It
+outputs a maximum 5 Vpp at about 134 dB SPL.</font></p>
+<p>
+<font face="Arial">
+The wiring diagram for a&nbsp; stereo microphone with output attenuator, if needed,
+and using the modified capsules is shown on the <a href="images/graphics/microph2.gif" target="_blank">microph2.gif</a>
+page.&nbsp;Attenuation of the microphone output degrades the signal to noise
+ratio and should only be used, when the preamplifier gain can not be reduced.<br>
+A discussion of microphone issues can be found at the <a href="http://groups.yahoo.com/group/micbuilders/" target="_blank">MicDIYers</a>
+forum.</font></p>
+<table border="1" width="100%" cellpadding="7">
+  <tr>
+    <td><img border="0" src="images/photos/Lyman3.jpg" width="180" height="222"><br>
+      <font face="Arial" size="1">Lyman Miller, March
+      2008</font></td>
+    <td valign="top"><font face="Arial"><i>I first learned about the microphone modification from
+      <a name="Lyman"> Lyman</a> Miller, Palo Alto, a
+friend and former colleague at HP, who came up with some of the most natural sounding
+recordings I had heard.&nbsp;Now retired, he is still much involved with
+      recording at Stanford University, mostly for their archives. He uses a
+      sphere microphone of his own design, initially with Panasonic capsules,
+      later with Schoeps and now with Sennheiser commercial microphone elements.</i>
+</font>
+      <p><font face="Arial"><i>Inspired by Lyman and Russ Riley, I have used the
+      Panasonic capsules in an easily portable and unobtrusive <a href="images/photos/stereo-mic2.JPG">stereo microphone</a>  setup for
+recording a variety of sound events in order to obtain reference material for
+evaluating my loudspeaker designs. A sampling of such recordings is available on
+a <a href="sound_picture_cd.htm">Demo CD</a>.
+      </i>
+</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2><b><font face="Arial" color="#008080">Shaped <a name="tone-burst"> toneburst</a> generator</font></b></h2>
+<p><font face="Arial">The <a href="JAES/jaes_papers80.htm"> shaped toneburst generator</a> is a gating circuit which
+counts off five cycles of an incoming sine wave and applies a cosine amplitude
+envelope to them so that the output signal gradually builds up from zero level to a
+peak and then decreases gradually back to zero. Since the number of cycles is
+fixed, the signal occupies a constant percentage frequency bandwidth, in this
+case about 1/3rd octave, centered at the sine wave frequency. The duration of the
+signal is long at low frequencies and becomes shorter as frequency
+increases.&nbsp;</font></p>
+<table border="0" width="100%" cellpadding="10">
+  <tr>
+    <td width="46%" valign="bottom"><font face="Arial">
+<img border="0" src="images/graphics/20brst1.gif" width="379" height="251"></font></td>
+    <td width="54%" valign="bottom">
+<p><font face="Arial"> The mathematical expression for a
+5-cycle burst with cosine envelope is:</font></p>
+<p><font face="Arial">f(t) = [0.5 - 0.5*cos(w*t)]*sin(5*w*t)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p><font face="Arial">
+where&nbsp; w = 2*pi*f&nbsp;&nbsp; and&nbsp;&nbsp; 0 &lt; t &lt; 1/f&nbsp;&nbsp;&nbsp;</font></p>
+<p><font face="Arial">Preferably, the burst is repeated once every second. The burst frequency
+should be stepped in 1/6
+octave increments (1.1225*f), starting at 20 Hz for full frequency coverage.</font></p>
+    </td>
+  </tr>
+</table>
+<p><font face="Arial">The signal is uniquely suited for speaker and room measurements, because when
+observed on an oscilloscope, it shows both frequency and time domain aspects of
+the system under test. <a href="publications.htm">Ref. 13</a>.&nbsp; It is also
+a safe test signal to explore maximum output capability of drivers and power
+amplifiers.&nbsp;</font></p>
+<p><font face="Arial">There are several ways in which you can generate shaped
+burst signals:</font></p>
+<ol>
+  <li><font face="Arial">Purchase my <a href="burst-cd.htm">Toneburst CD</a>. It
+    provides 4-cycle bursts in 1/3rd octave frequency steps from 20 Hz to 20
+    kHz.</font></li>
+  <li><font face="Arial">Create your own CD-R by using the &quot;Expression
+    Evaluator&quot; function of the GoldWave <a href="http://www.goldwave.com/" target="_blank">Digital Audio Editor</a>.&nbsp;A
+    procedure for <a href="Burst&#32;Gen&#32;GoldWave.doc" target="_blank">generating
+    burst files</a> was provided by Dave Reite.</font></li>
+  <li><font face="Arial">Build a simple gating circuit which approximates the cosine envelope
+    as shown in <a href="images/graphics/brst_gen.gif" target="_blank">brst_gen.gif</a>.
+    Some of the specified IC components, though, may no longer be available. The
+    <a href="Burst&#32;Gen&#32;mod.doc">circuit has been updated</a> to the extend necessary by
+    Jean
+    Hernan.
+The gating circuit must be driven from a signal generator, for
+example the <a target="_blank" href="http://www.nti-audio.com/Home/Products/Minstruments/tabid/56/Default.aspx">Neutrik Minirator</a>.
+Burst and signal generator, together, form a very practical, portable test
+signal source. This is not a pure burst source, because the approximation
+    generates lower amplitude harmonics of the burst.&nbsp;&nbsp;</font></li>
+  <li><font face="Arial">The most versatile solution for creating shaped tone bursts with all kinds of
+envelopes and numbers of cycles is provided by the <a target="_blank" href="http://www.home.agilent.com/agilent/product.jspx?nid=-536902257.0.00&amp;lc=eng&amp;cc=US">Agilent
+33120A</a>&nbsp; Arbitrary Waveform Generator in conjunction with the HP 34811A
+BenchLink Software. To me this is the ideal solution in conjunction with a
+    storage oscilloscope or MLSSA. It allows safe dynamic tests of speakers and
+    electronics to expose their limits without destroying them.</font></li>
+  <li><font face="Arial">Download or <a name="listen">listen</a> to a 1 kHz, 4-cycle
+burst with Blackman
+envelope, <a href="images/sound/1kblkman4.wav">1kblkman4.wav</a>, a test signal which is optimized for time domain observation of the response decay.&nbsp;A
+16000 point data file of the waveform is available as <a href="images/sound/blkman_4.prn.html">blkman_4.prn</a>.
+Point and amplitude values are separated by a tab. You can open the file in
+Excel and create a graph. It should be possible to generate from this *.wav files of
+different frequency.</font></li>
+  <li><font face="Arial">
+A signal consisting of four bursts with cosine envelope over 10 cycles of a 100 Hz
+sine-wave is useful for evaluating low frequency room acoustics, <a href="images/sound/100mbst4.wav">100mbst4.wav</a>.
+The loss in audible articulation of the test signal modulation is a measure of
+the masking due to room modes and other resonances excited by the speaker. <a href="publications.htm">Ref.1
+&amp; 13</a>. A 16000 point data file of the waveform for a single 10 cycle
+burst is available as <a href="images/sound/cos_10.prn.html">cos_10.prn</a>.
+</font></li>
+</ol>
+<p><font face="Arial"><a name="Minirator 1">You can download</a> and install a
+virtual <a href="Minirator/Virtual_MR1_EN_2.0.exe">Minirator MR1</a> signal
+generator, apparently obsoleted by <a href="http://www.nti-audio.com/Home/Products/Minstruments/tabid/56/Default.aspx" target="_blank">NTI</a>,
+to work with your computer's sound card. It provides a limited set of
+frequencies and signal types but can be useful nevertheless.</font></p>
+<p><font face="Arial">Sometimes you may need to know the frequency of a sound.
+To match a pitch and find its frequency download the <a target="_blank"
+href="http://www.citheory.com/download.htm">Virtual
+Piano</a> from Mike Marzalek's &quot;CI Theory&quot; website.<br>
+</font></p>
+<p align="center">---------------------------------------------------------------
+</p>
+<p align="center"><br>
+</p>
+<h1 align="left"><font face="Technical" color="#FF0000"><img border="0" src="images/graphics/phnx1.gif" width="180" height="33"></font></h1>
+<p align="left"><font face="Arial" size="2">| <a href="builtown.htm">Build-Your-Own</a> | <a href="m_panel.htm">Main Panel</a>
+| <a href="woofer.htm">Dipole Woofer</a> | <a href="xo_eq.htm">Crossover/EQ</a>
+| <a href="pcb.htm">Supplies</a> |<br>
+| <a href="sys_test.htm#PHOENIX System Test"><b><font color="#000000">System Test</font></b></a> | <a href="models.htm">Design
+Models</a> |</font>  <font face="Arial" size="2"><a href="proto.htm">Prototypes</a>
+| <a href="http://www.linkwitzlab.com/filter.htm">Active Filters</a> | <a href="surround_speaker.htm">Surround</a>
+| <a href="faq.htm">FAQ</a> |</font></p>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='sys_test.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>

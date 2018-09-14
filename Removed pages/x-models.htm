@@ -1,0 +1,910 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="description" content="Acoustical and electrical models for the design of a dipole loudspeaker with numerical examples for the PHOENIX project.">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="keywords" content="doublet, point sources, dipole, open-baffle, H-frame, flat baffle, equalization, slope correction, woofer, midrange, tweeter, excursion limit, level setting, voltage sensitivity, psych-acoustic dip">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Electro-acoustic models</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="../index.htm" background="../images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="../index.htm"><img border="0" src="../_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="../LXmini/LXmini+2.htm"><img border="0" src="../images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../LXmini/LXstudio.htm"><img border="0" src="../images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="../LX521/LX521_4.htm"><img border="0" src="../_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="../LX521/LX521_4.htm"><img border="0" src="../images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../orion_challenge.htm"><img border="0" src="../_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="../orion_asp.htm"><img border="0" src="../images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="../Pluto/electronics.htm"><img border="0" src="../_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="../Pluto/Pluto-2.1.htm"><img border="0" src="../images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="../Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif" align="center"><a href="../about_me.htm"><img border="0" src="../images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="../The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="../frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="../models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="../filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="../Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="../sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="../faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="../speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="../crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="../rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="../Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="../Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="../conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="../Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="../LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="../LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="../orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="../orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="../Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="../reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="../surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="../Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="../publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="../sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="../links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="../Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="../my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="../about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="../page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="../dpp/introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p>&nbsp;</p>
+<h1 align="left"><font face="Technical" color="#FF0000"><img border="0" src="../images/graphics/phnx1.gif" width="180" height="33"></font></h1>
+<p align="left"><font face="Arial" size="2">| <a href="../builtown.htm">Build-Your-Own</a> | <a href="../m_panel.htm">Main Panel</a>
+| <a href="../woofer.htm">Dipole Woofer</a> | <a href="../xo_eq.htm">Crossover/EQ</a>
+| <a href="../pcb.htm">Circuit Board</a> |<br>
+| <a href="../sys_test.htm">System Test</a> | <a href="x-models.htm#Models for a dipole"><b><font color="#000000">Design
+Models</font></b></a> | <a href="../proto.htm">Prototypes</a> | <a href="../filters.htm">Active
+Filters</a> | <a href="../surround_speaker.htm">Surround</a> | <a href="../faq.htm">FAQ</a>
+|</font></p>
+
+<p>&nbsp;</p>
+<h3><font face="Arial" color="#FF0000"><a name="Models for a dipole">Models for
+a dipole</a> loudspeaker design</font></h3>
+<p><font face="Arial">If you consider to build a dipole loudspeaker that uses
+conventional dynamic drivers, then you need some understanding of the inherent
+acoustic frequency response of such a speaker and how to design the necessary
+equalization for it. The following is a collection of models and circuits that I
+have used in the design of the PHOENIX loudspeaker. The numerical examples and
+sketches can help you understand the technical details and guide you in the
+development of your own <a name="design">design</a>.</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#A">A&nbsp;&nbsp;</a> - Two point sources
+of opposite polarity model<a href="x-models.htm#A"><br>
+</a><a href="x-models.htm#A1">A1</a> - Dipole equalization</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#B">B&nbsp;&nbsp;</a> - Open baffle loudspeakers<a href="x-models.htm#B1"><br>
+B1</a> - &quot;Compound dipole&quot; woofer model</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#C">C&nbsp;&nbsp;</a> - Dipole woofer equalization<br>
+<a href="x-models.htm#C1">C1</a> - Notch filter design<br>
+<a href="x-models.htm#C2">C2</a> - 6 dB/oct slope correction<br>
+<a href="x-models.htm#C3">C3</a> - Equalization of low Qt woofer</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#D">D&nbsp;&nbsp;</a> - Midrange dipole
+equalization</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#E">E&nbsp;&nbsp;</a> - Midrange to tweeter
+crossover</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#F">F&nbsp;&nbsp;</a> - Midrange to woofer
+crossover<br>
+<a href="x-models.htm#F1">F1</a> - Woofer level setting</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#G">G&nbsp;&nbsp;</a> - Level adjustment
+controls</font></p>
+<p align="left"><font face="Arial"><a href="x-models.htm#H">H&nbsp;&nbsp;</a> - Psycho-acoustic 3 kHz
+dip</font></p>
+<p><font face="Arial"><a href="x-models.htm#I">I&nbsp;&nbsp;&nbsp;</a> - Voltage sensitivity of an
+active system</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="A">A</a> - Two point sources of opposite polarity</font></b></font></p>
+<p><font face="Arial">Here is the basic model for <a href="http://www.kettering.edu/~drussell/Demos/rad2/mdq.html"> dipole radiation</a> and the only
+one that has a readily calculated closed form
+solution. Everything beyond this leads to complicated mathematics or
+approximations with limited range of applicability.&nbsp; </font></p>
+<p><img border="0" src="../images/graphics/2pt-src.gif" width="488" height="306"></p>
+<p><font face="Arial">Take two point sources, like two small closed box
+speakers. &quot;Small&quot; means that all the speaker dimensions are small
+compared to the wavelength radiated. These are monopole, omni-directional
+sources. Space them at distance D apart and drive them with opposite polarity
+(=180 degrees out-of-phase).
+The acoustic path length difference to the two sources is d = D*cos(a) when
+listening from far away. Thus, when each source emits a single impulse at the
+same time, one would measure two impulses separated by a time interval T = d/v
+at far distance. (v is the speed of sound propagation, 343 m/s). The received
+impulse response is a &quot;doublet&quot; consisting of a positive and a
+negative pulse. The doublet shortens with cos(a) and becomes zero for a=90
+degrees off-axis.&nbsp;<br>
+The magnitude response 20*log[ H(f) ] and the phase response (not shown) describe the
+doublet in the frequency domain.</font></p>
+<p><img border="0" src="../images/graphics/2pt-src2.gif" width="488" height="425"></p>
+<p><font face="Arial">The frequency response has a characteristic 6 dB/octave
+roll-off towards lower frequencies and sharp nulls at higher frequencies. The
+off-axis response, which is shown for 30, 45 and 60 degrees, is lower in
+amplitude at low frequencies by 1, 3, 6 dB respectively and follows a
+figure-eight or cos(a) pattern with nulls at +/-90 degrees. The cos(a) pattern
+is maintained down to the lowest frequency. There are also deep
+notches on-axis every time that D is a multiple of a wavelength and the polar
+pattern looks like made up of flower petals.&nbsp;&nbsp;</font></p>
+<p><font face="Arial">When the two opposite polarity point sources are separated
+by 1/2 wavelength ( f = 0.5*v/D ), then the additional 180 degrees of phase
+shift </font><font face="Symbol">j</font><font face="Arial"> add to a total of
+360 degrees and the resulting sound pressure is twice that (+6 dB) of a single
+source.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/2pt-src3.gif" width="488" height="465"><br>
+<font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p><font face="Arial"><b><a name="A1">A1</a> - Dipole equalization<br>
+</b>The sloping response of the dipole is not very useful and must be
+equalized.&nbsp; This is accomplished in the frequency domain by boosting the
+response at a uniform 6 dB/oct rate as frequency is lowered. Thus, the frequency
+response becomes flat at low frequencies and rolls off at 6 dB/oct in the region
+where the interference nulls occur. Such equalization corresponds to an
+integration and turns the doublet impulse response into a single impulse of
+duration T.</font></p>
+<p><img border="0" src="../images/graphics/dip-eq1.gif" width="488" height="587"></p>
+<p><font face="Arial">In practice, the dipole
+response is made flat by boosting the amplifier output at 6 dB/oct rate, but
+this places serious demands on the cone excursion capability of the driver.&nbsp;<br>
+A very important number for comparison purposes is the frequency for which the
+dipole output is the same as that of a single monopole, i.e. when&nbsp; |H(f)| =
+1 = 2*sin(180*f*T) = 2*sin(30), which yields</font></p>
+<p><font face="Arial">f = 1/(6*T) = 0.17*v/D&nbsp;</font></p>
+<p><font face="Arial">f = 229 Hz in figure 2 above. The comparable monopole has a flat
+frequency response (0 dB), whereas the dipole rolls off at 6 dB/oct. To
+maintain constant sound pressure level (0 dB) the monopole displaces four times
+(+12 dB/oct) the air volume for every halving of frequency, but the dipole has to
+have eight times (+18 dB/oct) the displacement. Very quickly the maximum
+excursion capability of a driver becomes the limiting factor for maximally
+achievable sound level. Multiple drivers must be used to go beyond this limit. A
+spreadsheet </font><font face="Arial" size="3"> <a href="../spl_max1.xls">spl_max1.xls</a> </font><font face="Arial">
+allows you to calculate the excursion limited SPL for known driver piston area
+and peak excursion. You find the logic behind the numbers in </font><font face="Arial" size="3"><a href="../images/graphics/theory.gif">theory.gif
+</a> .&nbsp;&nbsp; <a href="x-models.htm#design">Top</a> </font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="B">B</a> - Open-baffle loudspeakers</font></b></font></p>
+<p><font face="Arial">There is not much sense in building a dipole speaker with
+two small closed box speakers driven in opposite phase, when one of the
+objectives is to remove the sound character that boxes imparts. The two boxes <u>a</u>
+can be joined at their backs, though, and the connecting wall removed <u>b</u>.</font></p>
+<p><img border="0" src="../images/graphics/opbaffl1.gif" width="352" height="103"></p>
+<p><font face="Arial">Since the two cones move back and forth in unison, there
+is little air pressure inside the enclosure <u>b</u> at very low frequencies.
+When the internal length L becomes half wavelength,
+there is a sharp resonance of the transmission line between the cones, causing a
+severe dip and peak irregularity in the frequency response. The two drivers in <u>b</u>
+can be replaced by a single driver <u>c</u> without loss in volume displacement
+capability. The latter arrangement, called H baffle, is very practical for
+dipole woofer construction. It too has a severe resonance because the waveguide
+of effective length L in front and behind the cone sees large impedance
+mismatches at the cone and at the open end of the cabinet.&nbsp; The resonance occurs
+when L =</font><font face="Symbol"> l</font><font face="Arial">/4 =
+0.25*v/F.&nbsp;<br>
+For a baffle of D = 20&quot; (0.5 m) length and with L = 10&quot; (0.25 m)
+estimated, the resonance peak in the dipole output is at F = 0.25*v/L = 343 Hz.
+Even when the peak is removed by equalization, the H baffle should only be
+operated below this frequency. It is a compact baffle for woofer applications
+and I use it with slightly different driver arrangement for the PHOENIX.&nbsp;<br>
+Output equal to a closed box occurs at Fequal = 0.17*v/D = 117 Hz with the 20&quot;
+path difference D between the positive and negative polarity sources at the H
+baffle openings.&nbsp;<br>
+For a deeper analysis of the H-frame see the <a href="../frontiers.htm#L">Issues in
+speaker design</a> page.</font></p>
+<p><font face="Arial">I saw the H baffle concept for the first time, constructed
+as two woofer towers with six 12&quot; drivers each, D=16&quot;, and placed
+against the side walls, at the home of Brian J. Elliott, Ph.D, Consultant in
+Electro-Acoustics, in Palo Alto, 1988. I had never heard bass reproduced so
+naturally before.</font></p>
+<p><font face="Arial">The closed dipole baffle <u>b</u> with two drivers can be
+evolved <u>d</u> into the flat, <a name="circular, open baffle"> circular, open baffle</a> <u>e</u> with a single
+driver, while maintaining the same excursion limited output capability.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/opbaffl2.gif" width="393" height="167"></p>
+<p><font face="Arial">The circular baffle with a&nbsp; </font><font face="Century Gothic">-</font><font face="Arial">|+
+point source at its center has
+nearly the same polar radiation pattern as the two opposite polarity point sources
+spaced D apart in the model of <a href="x-models.htm#A"> figure A1</a> above. The circular baffle's usefulness
+at high frequencies is limited by the sharp interference nulls when D is a
+multiple of a wavelength. This behavior can be considerably smoothed by making
+the baffle <u>f</u> rectangular which gives a variation to the length of
+D.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/opbaffl3.gif" width="329" height="190"></p>
+<p><font face="Arial">For structural and aesthetic reasons you may want to fold
+back the baffle <u>g</u>. The baffle depth d must be kept shallow to avoid
+forming a cavity which stores acoustic energy and resonates. The exact shape of
+the folded baffle is best determined experimentally. Since there are no
+significant forces on the baffle you can quickly construct it from heavy
+corrugated card board. Only the drivers need to be held solidly in place.
+Measure on-axis and off-axis frequency response as you vary width height and
+depth.&nbsp;<br>
+This type of baffle can give you smoother response at all angles than is
+possible with a closed box, because the rear radiation coming around to the
+front can be used to advantage. With a closed box you only have the option to
+make the baffle either very narrow or very wide for smooth horizontal
+dispersion.&nbsp;For a discussion of diffraction and how it relates to open
+baffles look at <a href="../faq.htm">FAQ8</a>.&nbsp;<br>
+As frequency increases and the driver becomes more directional of its own, the
+polar pattern still has an approximately cos(a) shape, because the driver
+radiates front and rear and little to the sides of the open baffle.&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><a name="B1">B1</a> - &quot;Compound dipole&quot; woofer model<br>
+</b>Completely open driver arrangements have been used by Celestion and Legacy
+Audio. A simple model to describe this case would be given by two drivers mounted on their own small
+baffles of effective radius d<sub>1</sub> and separated by
+2d<sub>2</sub> from each other.<br>
+<br>
+&nbsp;</font><img border="0" src="../images/graphics/compound-dpl.gif" width="488" height="686"></p>
+<p><font face="Arial">The model predicts that the SPL at very low frequencies is
+merely the sum of two dipoles with spacing D = d<sub>1</sub>. The separation 2d<sub>2</sub>
+between them has no influence on the total output as long as it is small
+compared to the wavelength of radiation. I see no compounding effect other than
+summing two dipoles, but the two baffles might as well be placed next to each
+other.&nbsp; A single driver in an H-frame would
+have the same output if the distance D between the openings is 2d<sub>1</sub>. Even order non-linear distortion
+can be reduced by reversing one of the drivers in the compound configuration so that the two magnets
+face each other. The whole arrangement does not strike me as a very effective
+use of a second driver and cabinet space compared to an H or W frame. I
+have no data <a href="../faq.htm#Q28">how high in frequency</a> the &quot;compound woofer&quot;
+can be used, but its radiation pattern will become more lobing than that of the
+two point source woofer. </font><font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="C">C</a> - Dipole woofer equalization</font></b></font></p>
+<p><font face="Arial">If you have build an H baffle woofer, then the first step
+is to measure the frequency response of the drivers in the cabinet, In general,
+you can expect that the air loading on the cones will reduce the mechanical
+resonance frequency Fs and increase Qt. There will also be a response peak due
+to a </font><font face="Symbol">l</font><font face="Arial">/4 resonance of the
+waveguides in front and behind the drivers. The measurement is performed right
+at the opening of the cabinet, so that the microphone sees only one of the two
+sources that form the dipole. Therefore you will not see the characteristic 6
+dB/oct dipole slope in the data.</font></p>
+<p><img border="0" src="../images/graphics/w2a.gif" width="373" height="233"></p>
+<p><font face="Arial">The PHOENIX woofer has D=19&quot; (0.48 m) separation
+between its openings.&nbsp; The peak should be at&nbsp; f = 0.5*v/D = 357 Hz,
+but the cabinet layout is too complicated for such simple calculation to apply
+exactly. The woofer will be crossed over at 100 Hz with a 12 dB/oct L-R low-pass
+filter. The resonance peak will not be attenuated sufficiently by the low-pass
+and must be removed first with a notch filter. This usually takes some trial and
+error to find the best trade-off.&nbsp;&nbsp; </font><font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><a name="C1">C1</a> - Notch filter design<br>
+</b>From the graph, the 270 Hz peak rises about 11 dB. This requires the notch
+to dip down to -11 dB or to a = 10^(-11/20) = 0.28. The Q of the peak is about (270
+Hz)/(100 Hz) = 2.7 and determines the width of the notch.</font></p>
+<p><img border="0" src="../images/graphics/notch1.gif" width="444" height="238"></p>
+<p><font face="Arial">Select R1 = 5.11k, then R = 5110*0.28/(1-0.28) = 1987 ohm.<br>
+L = 2.7*1987/(2*pi*270) = 3.16 H and&nbsp;<br>
+C = 1/(3.16*(2*pi*270)^2) = 110 nF<br>
+The input impedance R2 of the following stage is assumed to be large, so that R2
+can be neglected for the filter calculation.<br>
+The large size inductor L is best realized with an active circuit <a href="../images/graphics/inductr2.gif">inductr2.gif</a>.</font>
+ <font face="Arial">The inductive reactance is X = 2*pi*270*3.16 = 5360 ohm. For
+the inductor to have a Q of at least ten times the Q of the notch, the parallel
+resistor must be greater than Rp = 10*2.7*5360 = 145 kohm. Select 147k as
+standard value.<br>
+Rs needs to be smaller than R (1987 ohm). Select Rs = 511 ohm to give some
+ adjustment room for R.<br>
+Now find C = 3.16/(511*(147000-511)) = 42.2 nF.<br>
+Finally, reduce R because the inductor contributes already 511 ohm. R = 1987-511
+= 1476 ohm.<br>
+Next step is to build a circuit with these values, insert it ahead of the power
+amplifier and measure the woofer response to see if the peak has been removed to
+your satisfaction or if the circuit values need further trimming.&nbsp;<br>
+ The 290NF
+stage in the PHOENIX <a href="../images/graphics/38xo_eq1.gif">crossover/eq</a>
+woofer channel has the final values and you can see that I had to do some
+experimentation with R, L and C to obtain the equalized response in the graph above.&nbsp;It
+ also helps to use a SPICE based circuit analysis program for the notch filter
+ circuit to find the inverse of the peak response more readily than via the
+ approximate calculations above.&nbsp;&nbsp; &nbsp;</font><font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p><font face="Arial"><b><a name="C2">C2</a> - 6 dB/oct dipole slope correction<br>
+</b>This part of the equalization is easy and only involves the decision at
+which frequency to start and to end. A circuit that is suitable for the task is
+the <a href="../images/graphics/shlv-lpf.gif">shelving low-pass</a>. The woofer
+dipole with D=19&quot; has its first peak ideally at 357 Hz and transitions into
+the 6 dB/oct slope somewhat below this frequency. Thus I chose f2 = 300 Hz. From
+the measured woofer response above, you can see that it is quite flat and 3 dB
+down at 13 Hz. Extending the equalization down to f1 = 10 Hz makes for a gradual
+transition into the ultimately 18 dB/oct roll-off region of the dipole below the
+driver resonance.&nbsp;<br>
+With those values we calculate from f2/f1 = 1+R2/R1 that&nbsp;<br>
+R2 = R1*((f2/f1) -1) = R1*((300/10)-1) = 29*R1.<br>
+Select R1 = 4.64k, then R2 = 134.6k or 133k as closest standard value.<br>
+Calculate C = 1/(2*pi*f1*R2) = 1/( 2*pi*10*133000) = 120 nF.<br>
+Check that f2 is indeed close to 300 Hz for the chosen values.<br>
+The circuit has a dc gain of 1+133/4.64 or 29.4 dB, which is high. This stage
+should come after the level setting circuit to avoid clipping distortion.&nbsp;<br>
+The woofer equalization is now complete (<a href="../images/graphics/x1.gif">x1.gif</a>).&nbsp;&nbsp;
+</font><font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p><font face="Arial"><b><a name="C3">C3</a> - Equalization of low Qt woofer<br>
+</b>You may be using a woofer which rolls off over a wider frequency range than
+the one in the PHOENIX because its Qt in the cabinet is less than 0.7, or the
+resonance frequency Fs is too high. In such cases you can equalize what you have
+into a more desirable response by using a special biquad circuit <a href="../images/graphics/f0Q0fpQp.gif">f0Q0fpQp.gif</a>.
+To apply the circuit you must determine f0 and Q0 for the drivers in the cabinet
+from a measurement of their terminal impedance according to <a href="../images/graphics/f0Q0.gif">f0Q0.gif</a>.<br>
+Keep in mind that with the biquad you are setting the two complex poles of a 3rd
+order high-pass filter. The 3rd, real axis pole is created by selecting&nbsp; f1
+for the dipole slope correction. There is no transient optimum high-pass filter
+like the Bessel filter for the low-pass case. The 3rd order Butterworth
+high-pass has no other merits than to look pretty. Optimum for time response is
+to place all three poles on the real axis, i.e. Qt = 0.5 for the dual poles, and
+then the frequency response is 9 dB down at Fs.&nbsp;<a href="../faq.htm#Q34">Better
+yet</a>, drivers with very low Qts &lt; 0.5 make it possible to place two real
+axis poles at 20 Hz and the 3rd pole around 5 Hz, but require more elaborate
+equalization, because they roll off&nbsp; with a pole around 80 Hz in addition
+to the 6 dB/oct dipole roll-off..<br>
+In general, I prefer the more gradual roll-off for any woofer, because it
+corresponds to a more linear phase response (more uniform group delay) and that
+is audible. The trade-off is in low end extension.&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p><font face="Arial">&nbsp;</font></p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="D">D</a> - Midrange dipole equalization</font></b></font></p>
+<p><font face="Arial">When you place a driver (e.g. SS 21W/8554) on a circular
+open baffle, then you measure a response that differs somewhat from the model <a href="x-models.htm#A"> under
+A</a>.&nbsp;<br>
+At low frequencies the response follows the 6 dB/oct slope, but the first peak
+and null are not clearly formed. Also, in the rear of the baffle, the response
+rolls off more than in front.</font></p>
+<p><img border="0" src="../images/graphics/mideq1.gif" width="482" height="269"></p>
+<p><font face="Arial">Very important to note is the first response peak. It is a
+function of the driver used and almost all drivers exhibit it to varying
+degrees. The peak is caused by an acoustic filter formed by the basket openings
+and trapped air between cone and basket. This filter is the reason for the
+differences in high frequency response between front and rear.</font></p>
+<p><font face="Arial">A driver becomes <a href="../images/graphics/pwr-resp.gif"> directional</a> of its own, when its
+effective piston diameter becomes larger than 1/3 of a wavelength. For an
+8&quot; driver this would be above 558 Hz. Still, the expected +6 dB dipole
+peak, when the rear wave adds fully to the front radiation at 838 Hz for the D =
+8&quot; circular baffle, can be seen in the measured data above. The expected
+null at 1675 Hz, though, is only partially formed, because not enough energy
+comes around the baffle edge.</font></p>
+<p><font face="Arial">The combined response of the two 8&quot; drivers mounted
+on the PHOENIX baffle also exhibits a peak due to the basket resonators. The
+peak must first be removed with a
+notch-filter, so that a shelving low-pass filter equalization can give the proper
+transition from the 6 dB/oct region into the flat region of the dipole response.</font></p>
+<p><img border="0" src="../images/graphics/mideq2.gif" width="469" height="306"></p>
+<p><font face="Arial">The off-axis response at 30, 45 and 60 degrees exhibits
+some interesting characteristics. At low frequencies it follows the cos(a)
+pattern as in the dipole model <a href="x-models.htm#A"> under A</a> above. Around 700 Hz and 1500 Hz the
+horizontal pattern actually widens, and only above 2 kHz becomes the pattern
+progressively narrower, as indicated by the separation of the response curves
+for different angles. The pattern would become narrow at much lower frequency,
+if you closed the back of the baffle.<br>
+The vertical polar <a href="../images/graphics/beam-dpl.gif">response</a> is
+dominated by the separation of the 8&quot; drivers and therefore much narrower.<br>
+On and off-axis response are very much a function of baffle shape and the amount
+of fold-back. Computer models are not available and the optimum shape must be
+determined experimentally.</font></p>
+<p><font face="Arial">With the above as background in mind, the midrange dipole
+equalization follows the steps outlined for the woofer <a href="x-models.htm#C"> under C</a>. The only
+difference is the choice of frequency f1 for the <a href="../images/graphics/shlv-lpf.gif">shelving
+low-pass</a>. Since the chosen crossover to the PHOENIX woofer is of 2nd-order,
+one of the two 1st-order high-pass sections can be realized by placing f1 at the
+crossover frequency of 100 Hz. The second high-pass filter is realized with the
+90HP stage of the <a href="../images/graphics/38xo_eq1.gif">crossover/eq</a>.<br>
+It is easiest to model the equalizer with a <a href="http://www.circuitmaker.com"> circuit CAD</a> program and to compare
+response curves to the measured data. The low Q of the notch filter (<a href="../images/graphics/x1.gif">x1.gif</a>)
+makes it
+difficult to predict circuit values with sufficient accuracy and requires
+iteration.&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="E">E</a> - Midrange to tweeter crossover</font></b></font></p>
+<p><font face="Arial">We start the crossover design with on-axis and horizontal
+off-axis frequency response measurements of the <a href="../images/graphics/p4.gif">tweeter</a>
+and the two <a href="../images/graphics/p3.gif">midrange</a> drivers on the PHOENIX
+main panel. It is important to know the off-axis behavior in order to choose the
+crossover frequency such that the combined midrange and tweeter response is as
+smooth as possible off-axis. The on axis ripples in the tweeter response are a
+mixture of diffraction off the midrange driver cones in the M-T-M arrangement,
+primarily at lower frequencies, and diffraction off the panel edges at higher
+frequencies. No attempt has been made to further reduce these effects by
+equalization, because they are dominant only on-axis and smoothed out
+off-axis.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/mid-twt1.gif" width="445" height="274"></p>
+<p><font face="Arial">The drivers have a 13 dB difference in sensitivity. The
+midrange channel gain will be set 13 dB lower than the tweeter channel to
+correct for this (<a href="../images/graphics/x1.gif">x1.gif</a>).<br>
+Selecting a 1400 Hz crossover frequency based on dispersion gives wide overlap
+between the drivers. The tweeter goes almost 2 octaves lower and the midrange 2
+octaves higher with useable flatness. Thus, when a 24 dB/oct <a href="../images/graphics/xo12-24.gif">L-R
+electrical crossover</a>&nbsp; filter at 1400 Hz is used, the combined driver
+and filter magnitude (dB) response will be mainly that of the electrical
+circuit. This specific situation reduces the design of the desired 24 dB/oct L-R
+acoustical crossover to the selection of components for a well known electrical
+circuit. Standard component values result in 1440 Hz high-pass filters in the
+tweeter channel and 1440 Hz low-pass filters in the midrange channel of the <a href="../images/graphics/38xo_eq1.gif">crossover/eq</a>.</font></p>
+<p><font face="Arial">The crossover frequency at 1400 Hz is quite low and
+therefore it is important to assure that the tweeter has adequately low
+distortion at the volume displacements required.&nbsp;<br>
+From the SS D2905/9700 specification of Xmax = 0.5 mm linear and 8.5 cm^2 cone
+area you <a href="../spl_max1.xls">estimate an SPL</a> = 101 dB at 1400 Hz, 1 m,
+free space, closed box. Add to this 6 dB lift from the baffle and 6 dB from the midrange
+contribution for a total of 113 dB SPL. Maximum displacement is 1.5 mm or 10 dB
+higher. The tweeter is within the desired range, but harmonic distortion,
+intermodulation distortion, stored energy measurements and listening tests must
+be additional criteria for choosing it.</font></p>
+<p><font face="Arial">The crossover design is not complete yet, because the
+tweeter's high-pass behavior and the midrange's roll-off cause phase shifts that
+are part of the crossover. In addition, the physical offset between driver voice
+coils causes delays and associated phase shift that must be corrected. This is
+best done experimentally and started with the driver offset.&nbsp;<br>
+The tweeter is approximately 2&quot; (0.05 m) in front of the midranges and its
+input signal must be delayed by T = d/v = 0.05/343 = 146 us to be in phase with
+the midranges. The group delay of an <a href="../images/graphics/allpass.gif">all-pass</a>
+circuit is used for the offset compensation.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/allpass2.gif" width="402" height="172"></p>
+<p><font face="Arial">The delay of the circuit changes with frequency, but the
+1400 Hz crossover should fall into the flat region of the delay and therefore f0
+&gt; 1400 Hz. You can estimate the number of stages required from this
+inequality.&nbsp;<br>
+If f0 = 1/(2*pi*R*C) &gt; 1400 and thus&nbsp;<br>
+R*C &lt; 1/(2*pi*1400) = 114 us,<br>
+then a single stage would have to be operated in its sloping region to obtain
+146 us of delay. Thus take two stages. The actual implementation in the <a href="../images/graphics/38xo_eq1.gif">tweeter
+channel</a> provides 85 us and 104 us for a total of 189 us. The value is larger
+than estimated, because the low-pass behavior of the midranges moves their voice
+coils effectively further behind the tweeter than the physical distance
+measurement.&nbsp;<br>
+The final component values for the all-pass circuits have been determined
+experimentally from an optimization of the combined midrange and tweeter <a href="../images/graphics/p5.gif">frequency
+response</a>. The depth of the interference notch when the tweeter polarity is
+reversed, is an indication of how closely the two outputs are to being 180
+degrees out-of-phase and of equal magnitude.&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="F">F</a> - Midrange to woofer crossover</font></b></font></p>
+<p><font face="Arial">From <a href="x-models.htm#C">C above</a> you can see that the dipole
+woofer's useable frequency range after equalization extends to 250 Hz at the
+most. If the response should follow the crossover low-pass filter closely over
+the first octave of roll-off, then the crossover frequency cannot be higher than
+100 Hz.&nbsp;</font></p>
+<p><font face="Arial">Initially, I used a 24 dB/oct L-R crossover for a similar
+speaker, the Audio Artistry Dvorak, but we found after extensive listening that
+a 12 dB/oct L-R gave a slight improvement in bass realism. I think this is due
+to the more gradual transition of the <a href="../images/graphics/xo12-24b.gif">group
+delay response</a> of the 1st order all-pass formed by the lower order crossover
+vs. the 2nd order all-pass for the 24 dB/oct crossover. I had found earlier (<a href="../publications.htm">Ref.
+17</a>) that phase distortion is audible at low frequencies even with a 1st
+order allpass. At high frequencies it must be much more severe than the phase
+distortion of a 24 dB/oct L-R crossover before it becomes audible.&nbsp;</font></p>
+<p><font face="Arial">I have recently investigated my previous assumption about
+the audibility of reduced phase distortion from a 12 dB/oct crossover between
+woofer and midrange, with the conclusion that the difference in phase shift
+between a 12 dB/oct and a 24 dB/oct crossover is not audible, not even when
+compared to a zero distortion 6 dB/oct crossover. Thus it would seem reasonable
+to use the higher order crossover which reduces the potential for non-linear
+distortion in the midrange driver and attenuates any higher frequency
+contribution from the woofer. I invite anyone interested to <a href="../phs-dist.htm">test
+for themselves</a> the validity of my observation.</font></p>
+<p><font face="Arial">A 12 dB/oct crossover places much greater demands on the
+excursion capability of the midrange drivers. When you apply a constant voltage
+to the driver terminals, then the cone excursion X1 increases at a 12 dB/oct
+rate going down in frequency, figure <u>a</u>. Below the driver resonance Fs the
+excursion X1 becomes constant. Dipole equalization Veq boosts the excursion at
++6 dB/oct up to the crossover frequency Fxo to give a flat SPL response. The
+terminal voltage decreases at 6 dB/oct rate below Fxo and, in conjunction with
+the dipole roll-off of 6 dB/oct, gives the 12 dB/oct acoustic high-pass filter
+response for the L-R crossover.&nbsp;&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/mid-wof1.gif" width="488" height="230"></p>
+<p><font face="Arial">The net effect of equalization for flat response and of
+the 12 dB/oct crossover is an increase of excursion X2 at 18 dB/oct above Fxo, 6
+dB/oct below it, and a decrease at 6 dB/oct below Fs as in figure <u>b</u>.</font></p>
+<p><font face="Arial">The SS 21W/8554 8&quot; driver on the PHOENIX main panel
+has 200 cm^2 piston area, 6.5 mm linear excursion and 10 mm Xmax. With an
+effective back to front path length D of 9.75&quot; (248 mm) the dipole SPL at
+100 Hz, 1 m, becomes <a href="../spl_max1.xls">97 dB</a>. The second driver
+increases the value by 6 dB and the woofer contributes another 6 dB for a total
+of 109 dB SPL. Driven to Xmax adds 4 dB more.<br>
+Note, that If you wanted to maintain 113 dB SPL down to 25 Hz, then the
+displacement of the two 8&quot; drivers would have to increase another 12 dB (X2
+figure <u>b</u>) to 4*10 mm = 40 mm peak, even though its contribution to the
+total SPL output would be 24 dB below the woofer output. In reality the 8&quot;
+drivers can maximally support 113 -12 = 101 dB SPL at 25 Hz.&nbsp;</font></p>
+<p><font face="Arial">You can begin to see why I added two 10&quot; drivers to
+the AA Beethoven and four 10&quot; drivers to the Beethoven-Grand to cover the
+range below 200 Hz. The transition between 10&quot; and 8&quot; drivers is at 6
+dB/oct for group delay reasons, but requires phase compensation to steer the
+vertical polar pattern towards the listener. Such <a href="../images/graphics/4w_block.gif"> 4-way system</a> is a little
+tricky to design and measure.</font></p>
+<p><font face="Arial">The 12 dB/oct 100 Hz crossover for two 8&quot; drivers is
+thus a trade-off between maximum sound level and sound quality. Circuit
+implementation is straight forward with a 2nd order low-pass (99LP) in the <a href="../images/graphics/38xo_eq1.gif">woofer
+channel</a>, the midrange dipole boost ending at 100 Hz (90-500LP) and a 100 Hz
+high-pass filter (90HP) in the midrange channel. The actual filter corner
+frequencies differ from the nominal values due to standard component value
+selection and trimming of the measured crossover response (<a href="../images/graphics/x1.gif">x1.gif</a>).&nbsp;&nbsp;
+</font><font face="Arial" size="3"><a href="x-models.htm#design">Top</a> </font></p>
+<p><font face="Arial"><b><a name="F1">F1</a> - Woofer level setting<br>
+</b>The crossover is not complete without setting the proper woofer level
+relative to the midrange. It is difficult to set by listening to program
+material because recordings vary greatly and room resonances can change the
+perceived level. It is best to start with outdoor measurements and to refine the
+result by indoor listening if a technically justifiable reason exists for it. (I
+am assuming that you want to build a transducer and not a musical instrument)</font></p>
+<p><font face="Arial">For the outdoor measurement you might might raise woofer
+and main panel some large distance Y above ground to minimize and delay the
+effect of reflections, figure <u>a</u>. Assume you adjust the system to be flat
+through the crossover region and beyond. Now, when you set the woofer on the
+ground and the panel at normal listening height, figure <u>b</u>, the woofer
+output will receive a uniform 6 dB boost because it radiates into
+half-space.&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/mid-wof2.gif" width="488" height="214"></p>
+<p><font face="Arial">The output from the panel will not increase 6 dB except at
+low frequencies where the sounds via the direct ray and the ground reflected ray
+to the listener L are almost in phase. At higher frequencies the ground
+reflection subtracts and adds periodically. The panel essentially radiates into
+full-space as in figure <u>a,</u> but with floor reflection superimposed to the
+response at L. If we left the woofer level adjustment as found in <u>a</u>, then
+the woofer contribution at the listening position in <u>b</u> would be 6 dB too
+high relative to the high frequencies from the panel. At low frequencies the
+panel receives a similar ground boost and its output becomes too large relative
+to its high frequencies.&nbsp;<br>
+The transition region between full-space and half-space radiation is equalized
+with a <a href="../images/graphics/shlv-hpf.gif">shelving high-pass</a> filter that
+gives a 6 dB cut to very low frequencies and has a gradual transition with
+corner frequencies at 100 Hz and 200 Hz. I determined the frequency values
+empirically. The filter (<a href="../images/graphics/38xo_eq1.gif">100-200HP</a>)
+is placed ahead of midrange and woofer channels to affect both (<a href="../images/graphics/x1.gif">x1.gif</a>).</font></p>
+<p><font face="Arial">Instead of measuring the combined frequency response at
+large elevation as in figure a, I measure it with the microphone on the ground,
+figure b. Under these conditions woofer and panel receive the same ground boost
+and no shelving filter is used. Crossover filters are trimmed and woofer level
+set for flat response. In my case this is not a completely reflection free
+measurement because of adjacent buildings and structures and I use some mental
+averaging of the wiggles. Ambient noise tends to limit the low frequency dynamic
+range and I therefore pre-emphasize the low frequencies of the MLS stimulus
+signal to increase measurement range.&nbsp;&nbsp;&nbsp;</font></p>
+<p><img border="0" src="../images/graphics/mid-wof3.gif" width="439" height="298"></p>
+<p><font face="Arial">When I now measure at L in figure <u>b</u> I find that the
+low frequency response is too high, but correct when the shelving filter is in
+the circuit.</font></p>
+<p><img border="0" src="../images/graphics/mid-wof4.gif" width="448" height="311"></p>
+<p><font face="Arial">Unfiltered and octave smoothed curves are shown
+above.&nbsp;</font></p>
+<p><font face="Arial">We usually do not listen outdoors, but even in a room we
+have the same floor effects. In addition there are the effects due to modes, if
+excited, and they become superimposed to the above response and should be dealt
+with separately, for example by room equalization with notch filters. The
+PHOENIX printed circuit board provides layouts for this.&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="G">G</a> - Level adjustment controls</font></b></font></p>
+<p><font face="Arial">The gain of the midrange channel is held constant. Tweeter
+and woofer outputs are adjusted relative to it. Since the midrange driver
+voltage sensitivity is 12 dB higher than the tweeter (see <a href="x-models.htm#E">E above</a>)
+I use a 12 dB attenuator ahead of the dipole equalization (<a href="../images/graphics/38xo_eq1.gif">90-500LP</a>).
+The 400NF notch filter, which is driven from the attenuator, must see an
+impedance of 5k ohm for proper equalization of the midrange peak as determined
+by experiment. Thus it becomes necessary to design a <a href="../images/graphics/attnrout.gif">resistive
+ladder</a> with an attenuation factor a = 10^(-12/20) = 0.25 and 5000 ohm output
+impedance.&nbsp;</font></p>
+<p><font face="Arial">For the variable gain in the woofer and tweeter channel I
+chose a 5 dB adjustment range which also matches with the10 tick marks on the
+trim potentiometer. The linear dB scale is generated with a circuit that I saw
+used by my former colleague Russ Riley. I have found many applications for it.</font></p>
+<p><img border="0" src="../images/graphics/gainadj2.gif" width="442" height="180"></p>
+<p><font face="Arial">R4 is a linear 1k ohm potentiometer. The values for R3 and
+R5 are determined from gmax = 0 dB (1.0) and gmin = -5 dB (0.56) with a little
+algebra as R3 = 3.55k and R5 = 2.55k. The closest standard series values of
+3.48k and 2.61k are used for the tweeter channel gain adjustment.&nbsp;<br>
+The woofer channel requires about 8 dB (0.40) of attenuation to match up with
+the midrange. A resistive ladder is used for this with an output impedance
+target Rout = R3 = 3.55k ohm to drive the variable gain stage (<a href="../images/graphics/38xo_eq1.gif">+/-2.5
+dB</a>).&nbsp;&nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p>&nbsp;</p>
+<p><font face="Arial"><b><font color="#FF0000"><a name="H">H</a> - Psycho-acoustic 3 kHz dip</font></b></font></p>
+<p><font face="Arial">Our perception of loudness is slightly different for
+sounds arriving frontally versus sounds arriving from random directions at our
+ears. The difference between equal-loudness-level contours in frontal
+free-fields and diffuse sound fields is documented, for example, in ISO
+Recommendation 454 and in E. Zwicker, H. Fastl, Psycho-acoustics, p. 205.&nbsp;<br>
+ Diffuse field equalization of dummy-head recordings is
+discussed in J. Blauert, Spatial Hearing, pp. 363, and headphone diffuse field equalization by
+G. Theile in JAES, Vol. 34, No. 12.&nbsp;<br>
+Reference to a slight dip in the 1 to 3 kHz region for loudspeaker equalization
+is made in H. D. Harwood (BBC Research Department), Some factors in loudspeaker
+quality, Wireless World, May 1976, <a href="../images/graphics/harwd.gif">p.48</a>.</font></p>
+<p><font face="Arial">Around 3 kHz our hearing is less sensitive to diffuse
+fields. Recording microphones, though, are usually flat in frequency response
+even under diffuse field conditions. When such recordings are played back over
+loudspeakers, there is more energy in the 3 kHz region than we would have
+perceived if present at the recording venue and a degree of unnaturalness is
+introduced.&nbsp;<br>
+This applies primarily to recordings of large orchestral pieces in concert halls
+where the microphones are much closer to the instruments than any listener. At
+most listening positions in the hall the sound field has strong diffuse
+components.&nbsp;<br>
+ I use a dip of 4 dB (<a href="../images/graphics/x1.gif">x1.gif</a>, <a href="../images/graphics/38xo_eq1.gif">2760NF</a>)
+to equalize for this. The circuit consists of R, C and L in series, forming a
+frequency dependent ladder attenuator in conjunction with the 5.11k ohm source
+resistor.&nbsp;You may choose to make the notch filter selectable with a switch
+for different types of recordings.</font></p>
+<p><font face="Arial">I have found through my own head-related recordings of symphonic music that the
+dip adds greater realism, especially to large chorus and to soprano voice and
+allows for higher playback levels. &nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<h4>&nbsp;</h4>
+<p><font face="Arial"><b><font color="#FF0000"><a name="I">I</a> - Voltage sensitivity of an active
+system</font></b></font></p>
+<p><font face="Arial">Normally the equivalent 1 m sound pressure level of a
+speaker is specified for a 2.83 V signal at the crossover input terminals. This
+would correspond to 1 W into 8 ohm if the terminal impedance was actually 8 ohm.
+Defining the 2.83 V, 1 m sensitivity for a system with electronic crossover/eq
+like the PHOENIX is not as straight forward.&nbsp;</font></p>
+<p><font face="Arial">Starting with the SS D2904/9800 tweeter, the
+manufacturer's specification is 90 dB SPL, 2.83 V, 1 m.&nbsp;<br>
+Sensitivity of the two midranges, wired in parallel, and mounted in the open
+baffle measures about <a href="../images/graphics/mid-twt1.gif">13 dB higher</a>
+than the tweeter or 103 dB SPL. The SS specification is 90 dB SPL for a single
+21W/8554 driver. For two drivers in parallel add 6 dB and for rear radiation
+reinforcement from the open baffle add another 6 dB, which explains the high
+measured value. The crossover circuit attenuates the signal to the midrange
+power amplifier by 13 dB except towards the lower frequencies where the 6 dB/oct
+dipole equalization and the crossover roll-off come in. The <a href="../images/graphics/x1.gif">7
+dB boost</a> at 100 Hz makes up for the loss in midrange sensitivity from 103 dB
+above 250 Hz&nbsp; to 103 - 7 = 96 dB SPL at 100 Hz.<br>
+The 1252DVC woofer driver has a 91 dB SPL specification which applies at Fequal
+= 0.17*v/D = 121 Hz. With two drivers in parallel the sensitivity becomes 97 dB,
+but rolls off at 6 dB/oct rate below 121 Hz. Thus at 60 Hz the sensitivity is 91
+dB SPL and goes down to 85 dB SPL at 30 Hz.</font></p>
+<p><font face="Arial">The above SPL values are for 2.83 V across the driver
+terminals. With a tweeter <a href="../images/graphics/p1.gif">impedance</a> of
+about 4.5 ohm over its used frequency range this corresponds to (2.83)^2 / 4.5 =
+1.8 W. For the paralleled midranges with 3.5 ohm impedance the power becomes 2.3
+W and &lt;1.2 W for the <a href="../images/graphics/w1.gif">woofer</a> drivers at
+&gt;6.5 ohm total.&nbsp;</font></p>
+<p><font face="Arial">For an estimate of the power required to obtain a desired
+SPL level in an enclosed space at listening position see the discussion of
+&quot;Room reverberation time T60&quot; on the <a href="../rooms.htm">Room
+acoustics</a> page. &nbsp; <a href="x-models.htm#design">Top</a></font></p>
+<p align="center">-------------------------------</p>
+<p>&nbsp;</p>
+<p><font face="Arial">The <a href="../faq.htm">Frequently Asked Questions</a> page
+will show you answers to inquiries which I received about the PHOENIX project
+and related subjects.</font></p>
+<p align="left">&nbsp;</p>
+<p>&nbsp;</p>
+<h1 align="left"><font face="Technical" color="#FF0000"><img border="0" src="../images/graphics/phnx1.gif" width="180" height="33"></font></h1>
+<p align="left"><font face="Arial" size="2">| <a href="../builtown.htm">Build-Your-Own</a> | <a href="../m_panel.htm">Main Panel</a>
+| <a href="../woofer.htm">Dipole Woofer</a> | <a href="../xo_eq.htm">Crossover/EQ</a>
+| <a href="../pcb.htm">Circuit Board</a> |<br>
+| <a href="../sys_test.htm">System Test</a> | <a href="x-models.htm#Models for a dipole"><b><font color="#000000">Design
+Models</font></b></a> | <a href="../proto.htm">Prototypes</a> | <a href="../filters.htm">Active
+Filters</a> | <a href="../surround_speaker.htm">Surround</a> | <a href="../faq.htm">FAQ</a>
+|</font></p>
+
+<p align="left">&nbsp;</p>
+
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="../IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="../images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='x-models.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public/Removed pages';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>

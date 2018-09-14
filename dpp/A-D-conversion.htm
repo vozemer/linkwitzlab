@@ -1,0 +1,621 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Analog to digital conversion</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="../links.htm" background="../images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="../index.htm"><img border="0" src="../_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="../LXmini/LXmini+2.htm"><img border="0" src="../images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../LXmini/LXstudio.htm"><img border="0" src="../images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="../LX521/LX521_4.htm"><img border="0" src="../_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="../LX521/LX521_4.htm"><img border="0" src="../images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../orion_challenge.htm"><img border="0" src="../_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="../orion_asp.htm"><img border="0" src="../images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="../Pluto/electronics.htm"><img border="0" src="../_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="../Pluto/Pluto-2.1.htm"><img border="0" src="../images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="../Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif" align="center"><a href="../about_me.htm"><img border="0" src="../images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="../The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="../frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="../models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="../filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="../Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="../sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="../faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="../speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="../crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="../rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="../Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="../Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="../conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="../Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="../LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="../LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="../orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="../orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="../Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="../Removed&#32;pages/x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="../reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="../surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="../Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="../publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="../sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="../links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="../Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="../my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="../about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="../page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#000000">Digital Photo Processes</font></h1>
+<p><font face="Arial">-- <font color="#000000"><a href="introduction.htm">Introduction</a></font>
+-- <a href="camera&#32;lens.htm">Lens
+&amp; image</a> -- <a href="A-D-conversion.htm"><font color="#808080"><b>A/D
+conversion</b></font></a> -- <a href="lumix-leica.htm">Lumix &amp; Leica</a> --&nbsp;
+<a href="sharpness.htm">Sharpness</a> -- <a href="ccd_noise1.htm">CCD noise1</a> -- <a href="ccd_noise2.htm">CCD
+noise2</a> --&nbsp;<a href="5-years-later.htm">5 years later</a> --&nbsp;</font></p>
+<h3 align="left">&nbsp;</h3>
+<h1><font face="Arial" color="#808080">Analog to digital conversion</font></h1>
+<p><font face="Arial">The CCD or CMOS sensor in a digital camera converts light
+photons into electrons. Each of the millions of sensor pixels accumulates an
+electric charge that is proportional to the number of photons which it collects.
+Each pixel has a red, green or blue filter in front of it. The filters are
+arranged in a Bayer mosaic pattern consisting of two green, one red and one blue
+filter and a micro lens for each. After a picture has been taken and the sensor
+has been exposed to light, the charge from each pixel is read out and converted
+to a voltage. The pixel charge is reset to zero, i.e. to black. The conversion
+process adds electrical circuit noise to the light voltage. Further noise is
+added when the voltage is amplified in order to work with the camera in low
+light at increased ISO. The voltage which represents the luminance of each pixel
+is then converted into a binary number by a 12-bit analog-to-digital converter.
+Information about a pixel's x and y location is added, as are metadata about the
+sensor's color filters and chosen camera white balance setting. This becomes the
+RAW data file that is stored in the camera memory on a removable SD card, for
+example.</font></p>
+<table border="0" width="100%" cellpadding="4">
+  <tr>
+    <td width="50%"><img border="0" src="dpp&#32;graphics/Light-to-number-2.jpg" width="500" height="456"></td>
+    <td width="50%" valign="top"><font face="Arial">The 12-bit pixel luminance
+      data D1 from the ADC are converted and compressed inside the camera into a
+      JPG file, D2, with 8-bit Red, Green and Blue luminance information for
+      each pixel. This creates a much smaller data file than the corresponding
+      RAW file, D3. It saves memory space, and more importantly allows a much
+      faster rate of taking pictures.</font>
+      <p><font face="Arial">The JPG compression is optimized by the user chosen
+      setting for its Quality, Contrast, Sharpness, Saturation, Noise reduction
+      and White balance. Information is always lost in the process. Especially
+      White balance, Noise reduction and Sharpening cannot be undone in
+      post-processing of the JPG file, though they can be changed..</font></td>
+  </tr>
+</table>
+<p><font face="Arial">The light which is reflected from a scene can span a wide
+range of intensities, like 10000:1 between highlights and shadows. A large CCD
+sensor may be able to capture that range without saturating or clipping the
+highlights and losing shadow detail in its noise. The output voltages from the
+various pixels would simultaneously vary linearly over that same 10000:1 range.
+The human eye and brain system does not work the same way and compresses that
+wide scene range into a much smaller perceptual range depending upon where the
+eye is focused at the moment..</font></p>
+<table border="0" width="100%" cellpadding="5" cellspacing="5">
+  <tr>
+    <td width="50%" valign="top"><img border="0" src="dpp&#32;graphics/ccd-T-function2.jpg" width="550" height="538"></td>
+    <td width="50%" valign="top"><font face="Arial"><a name="The CCD transfer">The
+      CCD transfer</a> function relates photon input to electron output. It is
+      shown with log-log scales to cover the wide ranges.&nbsp;</font>
+      <p><font face="Arial">For example, for an input light range 1 from dark to
+      light, D-L,&nbsp; the output voltage changes from D1 to L1. Normal
+      exposure for an average of 18% gray scene reflectivity is set to fall
+      slightly above the middle of the D1-L1 range.&nbsp;</font></p>
+      <p><font face="Arial">At low light levels electronic circuit noise X-Y is
+      dominant. At high light levels the photon noise Y-Z, which is proportional
+      to the square root of the number of collected photons, takes over. Thus
+      the signal-to-noise ratio is governed by electronic noise at low
+      illumination and by photon noise at high illumination in this
+      example.&nbsp;</font></p>
+      <p><font face="Arial">Larger sensors with larger pixel areas can collect
+      more photons before a pixel saturates. They produce a larger signal output
+      voltage, while their electronic noise is not that different from a smaller
+      sensor. Thus photon noise determines the ultimate S/N ratio that can be
+      realized in larger sensor cameras.</font></p>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+<table border="0" width="100%" cellpadding="4" cellspacing="5">
+  <tr>
+    <td width="43%"><img border="0" src="dpp&#32;graphics/ccd-Exposure-S-N-2.jpg" width="357" height="298"></td>
+    <td width="57%" valign="top"><font face="Arial">If the same scene D-L as 1
+      above is photographed with a higher ISO setting, then the number of
+      photons impinging upon the sensor is reduced. To obtain the same 18% gray
+      output voltage level the gain after the CCD charge conversion is
+      increased. This also increases the noise and degrades S/N.&nbsp;</font>
+      <p><font face="Arial">At ISO 100 both circuit, X-Y, and photon noise, Y-Z,
+      determine S/N depending upon the relative number of photons collected. At
+      ISO 400 the S/N ratio is solely determined by circuit noise as the lowest
+      line shows.</font></p>
+      <p><font face="Arial">Doubling ISO degrades S/N by a factor of two in the
+      circuit noise range, but only by a factor of square root of two in the
+      photon noise dominated range.</font></td>
+  </tr>
+</table>
+<p><font face="Arial"><a name="The large range">The large range</a> of output
+voltages V1 that is generated by the photon conversion process is, for example,
+digitized by a 12-bit linear ADC for storage as a RAW file. The JPG file,
+though, has only 8-bit luminance information, corresponding to a light range
+from 0 to 255. It is derived from the 0 to 4095 range of the 12-bit ADC output
+D1. In a direct 12 bit to 8 bit conversion the first 2048 levels would be
+represented by the first 95 levels of the 0 to 255 range. The next 1024 levels
+would be represented by 60 levels and so on as in the table below. This type of
+conversion would assign too many levels to the highlights of a picture and not
+enough to the dark regions. As a trade-off the conversion is done with a slope
+of 1/2.2 = 0.45 which is called gamma = 2.2. The last column in the table shows
+the corresponding distribution and the graph shows the 12 to 8 conversion on
+log-log scale.&nbsp;</font></p>
+<p><font face="Arial">An 8-bit JPG file is also used to generate the luminance
+histogram on the camera's LCD and therefore under-represent what is captured in
+the RAW file in the critical highlight area to the right edge of the histogram.</font></p>
+<table border="0" width="100%" cellpadding="2">
+  <tr>
+    <td width="98" align="center" background="../images/graphics/bg-notepaper1.gif"><font face="Arial">Input
+      level<br>
+      log2</font></td>
+    <td width="98" align="center" background="../images/graphics/bg-notepaper1.gif"><font face="Arial">12-bit<br>
+      level diff.<br>
+      12/12 slope</font></td>
+    <td width="97" align="center" background="../images/graphics/bg-notepaper1.gif"><font face="Arial">8-bit<br>
+      level diff.<br>
+      8/12 slope</font></td>
+    <td width="97" align="center" background="../images/graphics/bg-notepaper1.gif"><font face="Arial">8-bit<br>
+      level diff.<br>
+      1/2.2 slope</font></td>
+    <td rowspan="12" valign="top"> <img border="0" src="dpp&#32;graphics/A-D-co5.gif" width="413" height="332"><br>
+      &nbsp; (<font face="Arial">Source data: <a href="pixel-stats1.xls" target="_blank">pixel-stats1.xls</a>)</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">12</font></td>
+    <td width="98" align="center"><font face="Arial">2048</font></td>
+    <td width="97" align="center"><font face="Arial">95</font></td>
+    <td width="97" align="center"><font face="Arial">69</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">11</font></td>
+    <td width="98" align="center"><font face="Arial">1024</font></td>
+    <td width="97" align="center"><font face="Arial">60</font></td>
+    <td width="97" align="center"><font face="Arial">50</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">10</font></td>
+    <td width="98" align="center"><font face="Arial">512</font></td>
+    <td width="97" align="center"><font face="Arial">38</font></td>
+    <td width="97" align="center"><font face="Arial">37</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">9</font></td>
+    <td width="98" align="center"><font face="Arial">256</font></td>
+    <td width="97" align="center"><font face="Arial">24</font></td>
+    <td width="97" align="center"><font face="Arial">27</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">8</font></td>
+    <td width="98" align="center"><font face="Arial">128</font></td>
+    <td width="97" align="center"><font face="Arial">15</font></td>
+    <td width="97" align="center"><font face="Arial">20</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">7</font></td>
+    <td width="98" align="center"><font face="Arial">64</font></td>
+    <td width="97" align="center"><font face="Arial">9</font></td>
+    <td width="97" align="center"><font face="Arial">14</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">6</font></td>
+    <td width="98" align="center"><font face="Arial">32</font></td>
+    <td width="97" align="center"><font face="Arial">6</font></td>
+    <td width="97" align="center"><font face="Arial">11</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">5</font></td>
+    <td width="98" align="center"><font face="Arial">16</font></td>
+    <td width="97" align="center"><font face="Arial">4</font></td>
+    <td width="97" align="center"><font face="Arial">8</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center"><font face="Arial">4</font></td>
+    <td width="98" align="center"><font face="Arial">8</font></td>
+    <td width="97" align="center"><font face="Arial">2</font></td>
+    <td width="97" align="center"><font face="Arial">6</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center" bgcolor="#C0C0C0"><font face="Arial">3</font></td>
+    <td width="98" align="center" bgcolor="#C0C0C0"><font face="Arial">4</font></td>
+    <td width="97" align="center" bgcolor="#C0C0C0"><font face="Arial">1</font></td>
+    <td width="97" align="center" bgcolor="#C0C0C0"><font face="Arial">4</font></td>
+  </tr>
+  <tr>
+    <td width="98" align="center" bgcolor="#C0C0C0"><font face="Arial">2</font></td>
+    <td width="98" align="center" bgcolor="#C0C0C0"><font face="Arial">2</font></td>
+    <td width="97" align="center" bgcolor="#C0C0C0"><font face="Arial">1</font></td>
+    <td width="97" align="center" bgcolor="#C0C0C0"><font face="Arial">3</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2><font face="Arial" color="#808080">Data file post-processing and rendering</font></h2>
+<p><font face="Arial">The RAW or JPG picture files from the camera are further
+processed in a computer for eventual presentation on a CRT or LCD display, for a
+paper print, or for the Internet. Each has different requirements. The LCD can
+render a wider range of luminance than the reflected light from a print and the
+gamma compression is undone. Their color spaces are different. The Internet file
+has to be small for speedy transmission, low storage requirements and to fit the
+allocated size in the display.&nbsp;</font></p>
+<table border="0" width="100%" cellpadding="4">
+  <tr>
+    <td width="50%" valign="top"><img border="0" src="dpp&#32;graphics/Number-to-Display-2.jpg" width="500" height="366"></td>
+    <td width="50%" valign="top"><font face="Arial">The RAW file with its 12-bit
+      luminance and Metadata information must first be converted into an 8-bit
+      RGB and Luminance format which can then be rendered in standard fashion
+      for the different final output displays.&nbsp;</font>
+      <p><font face="Arial">The in-camera white balance setting had no effect
+      upon the pixel luminance data and is only carried over as information that
+      can be used in rendering the RAW file. Color and lighting parameters can
+      be freely adjusted without destroying the original data. Only noise
+      reduction and sharpening correlate adjacent pixels in a non-reversible
+      way. Raw converters differ in their capabilities and performance for
+      rendering the original data file.&nbsp;</font></p>
+      <p><font face="Arial">The JPG file has been rendered in-camera. It can
+      still be changed in post-processing, but picture pixel information has
+      already been combined or lost and cannot be retrieved.&nbsp;</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h2><font face="Arial" color="#808080">Measured Light-to-Data transfer functions</font></h2>
+<p><font face="Arial">Using a constant intensity light source, and then taking
+pictures of it at constant aperture and stepped shutter times, gives a series of
+photographs which can then be evaluated numerically in post-processing. Over 40
+RAW <a href="ccd_noise2.htm#S/N measurement procedure">files were collected</a>
+for a Lumix FZ50 camera. They were converted in ACR and then an area of 350 x
+350 pixels was analyzed for the mean value of the 8-bit RGB data and the standard deviation of
+their luminance.</font></p>
+<table border="0" width="100%" cellpadding="5">
+  <tr>
+    <td width="50%" valign="top"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co2.gif" width="438" height="347"><br>
+      &nbsp;f:3.2 and 1/4 s, 1/6 s, 1/15 s, 1/25 s at 0 relative exposure<br>
+      &nbsp;Panasonic Lumix FZ50</font></td>
+    <td width="50%" valign="top"><font face="Arial">The luminance output from
+      ACR has an 8-bit range, 0 to 255. The exposure scale is in 1-stop steps
+      relative to normal exposure, e.g. f:3.2 and 1/4 s for ISO 100.</font>
+      <p><font face="Arial">The transfer function has a leaning S-shape as it
+      bends into CCD saturation and clipping at high exposure and into darkness
+      and electronic noise at low exposure. The curves for different ISO values
+      look similar in this log-lin presentation.&nbsp;</font></p>
+      <p><font face="Arial">The 8-bit data are already compressed approximately
+      like to the gamma = 2.2
+      curve which was discussed <a href="A-D-conversion.htm#The large range">above</a> and is
+      superimposed here. The desired shape of the S-curve is implicitly
+      specified by the camera manufacturer in the RAW file Metadata and imbedded
+      in the camera's JPG output file.</font></td>
+  </tr>
+</table>
+<p><font face="Arial">The four S-curves above are the result of one way of
+plotting the measured data points. When plotted on log-log scales and against
+the actual exposure times, then their shape looks different, see below, and
+reveals low luminance level information more clearly. In particular, the
+signal-to-noise ratio at different ISO values can be seen. S/N is the ratio of
+the luminance mean value to its standard deviation. Even with the measurement
+uncertainties involved, it can be seen that S/N has a slope of 1. This indicates
+that the noise is additive as in the circuit noise region discussed <a href="A-D-conversion.htm#The CCD transfer">above</a>.
+The small sensor in the FZ50 is far from being photon noise limited.&nbsp;</font></p>
+<table border="0" width="100%">
+  <tr>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co3.gif" width="370" height="324"><br>
+      &nbsp;f:3.2</font></td>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co4.gif" width="370" height="323"><br>
+      &nbsp;f:3.2</font></td>
+  </tr>
+</table>
+<p><font face="Arial">Plotting the same measured data again on log-log scales, but
+against relative exposure,
+highlights changes in the shape of the S-curve and the degradation of S/N with
+increasing ISO. A relative exposure of 0 below corresponds to 1/4 s for ISO 100,
+1/6 s for ISO 200, 1/15 s for ISO 400 and 1/25 s for ISO 800 in the two graphs
+above. This data presentation describes the change in luminance and S/N when a
+picture is taken of a scene for which the light ranges from -6 to +2 stops and
+the average corresponds to 18% gray at 0.&nbsp;&nbsp;&nbsp;</font></p>
+<table border="0" width="100%" cellpadding="4">
+  <tr>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co6.gif" width="351" height="275"><br>
+      &nbsp;f:3.2, 1/4 s</font></td>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co7.gif" width="351" height="275"><br>
+      &nbsp;f:3.2, 1/15 s</font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co8.gif" width="350" height="273"><br>
+      &nbsp;f:3.2, 1/6 s</font></td>
+    <td width="50%"><font face="Arial"><img border="0" src="dpp&#32;graphics/A-D-co9.gif" width="350" height="273"><br>
+      &nbsp;f:3.2, 1/25 s</font></td>
+  </tr>
+</table>
+<p><font face="Arial">It would take more experience than I have to relate the
+measured curves and their shape to details of the final image quality. Note,
+though, the change in the slope of the luminance curves below -3 stops. It
+becomes shallower as ISO increases. Contrast and blackness are lost as noise
+takes over. The effect will be different when viewed on an LCD with high
+contrast ratio or when a color print is made on a
+specific art paper. The curves illustrate the well-known degradation that can be
+expected from increases in ISO.&nbsp;<br>
+(Source data: <a href="S-N-tests1.xls" target="_blank">S-N-tests1.xls</a>)</font></p>
+<p><font face="Arial">The analog to digital conversion process description above
+should have made it clear that RAW capture is essential in order to minimze data
+manipulation in a 3 x 8-bit RGB preprocessed data space. The highest image quality
+is obtained if the ACR converter is used to optimize all the various image
+parameters before generating 8-bit RGB data for further processing in PS
+Elements 6. No such conversion takes place in Adobe Photoshop Lightroom and the
+RAW data are processed with full dynamic range. Unfortunately I could not find
+access to the mean and standard deviation values in 12-bit space to see if the
+8-bit graphs above misrepresent the the inherent capability of the camera. I
+doubt it though.&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial">References:</font></p>
+<p><font face="Arial">1 - Making the Transition from Film to Digital, <a href="http://www.adobe.com/digitalimag/pdfs/transition_from_film.pdf" target="_blank">AdobeTechnical
+Paper</a><br>
+2 - Understanding Digital Raw Capture, <a href="http://www.adobe.com/digitalimag/pdfs/understanding_digitalrawcapture.pdf" target="_blank">Adobe
+Whitepaper</a><br>
+3 - Raw Capture, Linear Gamma, and Exposure, <a href="http://www.adobe.com/digitalimag/pdfs/linear_gamma.pdf" target="_blank">Adobe
+Whitepaper</a><br>
+4 - Rendering the Print: the Art of Photography, <a href="http://wwwimages.adobe.com/www.adobe.com/products/photoshop/family/prophotographer/pdfs/pscs3_renderprint.pdf" target="_blank">Adobe
+Technical Paper</a><br>
+5 - CCD Image Sensor Noise Sources, <a href="http://astro.union.rpi.edu/documents/CCD%20Image%20Sensor%20Noise%20Sources.pdf" target="_blank">Kodak
+Application Note</a><br>
+6 - Introduction to CMOS Image Sensors, <a href="http://micro.magnet.fsu.edu/primer/digitalimaging/cmosimagesensors.html" target="_blank">Optical
+Microscopy Primer<br>
+</a>7 - CCD Noise Sources and Signal-to-Noise Ratio, <a href="http://learn.hamamatsu.com/articles/ccdsnr.html" target="_blank">Hamamatsu
+Review Articles<br>
+</a>8 - CCD Signal-to-Noise Ratio, <a href="http://www.microscopyu.com/tutorials/java/digitalimaging/signaltonoise/index.html" target="_blank">Nikon
+MicroscopyU</a><br>
+</font></p>
+<p><font face="Arial">-- <font color="#000000"><a href="introduction.htm">Introduction</a></font>
+-- <a href="camera&#32;lens.htm">Lens
+&amp; image</a> -- <a href="A-D-conversion.htm"><font color="#808080"><b>A/D
+conversion</b></font></a> -- <a href="lumix-leica.htm">Lumix &amp; Leica</a> --&nbsp;
+<a href="sharpness.htm">Sharpness</a> -- <a href="ccd_noise1.htm">CCD noise1</a> -- <a href="ccd_noise2.htm">CCD
+noise2</a> --&nbsp;<a href="5-years-later.htm">5 years later</a> --&nbsp;</font></p>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="../IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="../images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='A-D-conversion.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public/dpp';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>

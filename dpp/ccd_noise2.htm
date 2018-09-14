@@ -1,0 +1,966 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>CCD noise 2</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="../index.htm" background="../images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="../index.htm"><img border="0" src="../_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="../LXmini/Introduction.htm"><img border="0" src="../_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="../LXmini/LXmini+2.htm"><img border="0" src="../images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../LXmini/LXstudio.htm"><img border="0" src="../images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="../LX521/LX521_4.htm"><img border="0" src="../_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="../LX521/LX521_4.htm"><img border="0" src="../images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="../orion_challenge.htm"><img border="0" src="../_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="../orion_asp.htm"><img border="0" src="../images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="../Pluto/electronics.htm"><img border="0" src="../_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="../Pluto/Pluto-2.1.htm"><img border="0" src="../images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="../Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif" align="center"><a href="../about_me.htm"><img border="0" src="../images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="../The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="../frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="../models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="../filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="../Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="../sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="../faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="../speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="../crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="../rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="../Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="../Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="../conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="../Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="../LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="../LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="../LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="../orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="../orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="../Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="../Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="../builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="../Removed&#32;pages/x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="../reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="../surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="../Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="../images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="../publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="../sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="../links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="../Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="../my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="../about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="../page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="../images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="../Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="../What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="../Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="../Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#808080">Digital Photo Processes</font></h1>
+<p><font face="Arial">-- <font color="#000000"><a href="introduction.htm">Introduction</a></font>
+-- <a href="camera&#32;lens.htm">Lens
+&amp; image</a> -- <a href="A-D-conversion.htm">A/D conversion</a> -- <a href="lumix-leica.htm">Lumix &amp; Leica</a> --&nbsp;
+<a href="sharpness.htm">Sharpness</a> -- <a href="ccd_noise1.htm">CCD noise1</a> -- <a href="ccd_noise2.htm"><font color="#808080"><b>CCD
+noise2</b></font></a>  --&nbsp;<a href="5-years-later.htm">5 years later</a> --&nbsp;</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#808080">4 - CCD photo sensor noise - Some basics</font></h1>
+<p><font face="Arial">The <a href="http://astro.union.rpi.edu/documents/CCD%20Image%20Sensor%20Noise%20Sources.pdf" target="_blank">Photon
+Transfer Curve</a> describes a sensor's noise floor and its saturation point.
+The dynamic range of a camera can be derived from this. The PTC is not available
+to a camera owner but its general shape is useful to explain what can be
+measured or observed in photographs by varying the light input level to the
+sensor and its ISO setting as shown below.</font></p>
+<table border="0" width="100%" cellpadding="5">
+  <tr>
+    <td width="50%" valign="top"><img border="0" src="dpp&#32;graphics/ccd-noise-graph.jpg" width="500" height="548"></td>
+    <td valign="top"><font face="Arial">Here the horizontal axis of the graph is
+      light exposure, expressed in signal electrons or photons. The vertical
+      axis describes the output in electrons or volts. Both axes are
+      logarithmic. Every tick mark to the right or up doubles the value.&nbsp;<br>
+      The PTC is represented by line XYZ. The flat section XY describes circuit
+      noise, section YZ describes photon noise due to increased light levels.
+      Line X-L1 is the signal output voltage at the nominal sensor sensitivity.
+      It continues towards saturation at point Z where consequently the output
+      noise drops abruptly. There is no useful output above this point. </font>
+      <p><font face="Arial">Assume that the input light level covers the range
+      DL as in the horizontal bar 1. For correct exposure its 18% gray level is
+      adjusted to the 18% gray output voltage level by changing aperture and
+      exposure time, e.g. f:2.8 at 1/20 s. In this case the output signal to
+      noise at the light end of the range equals L1/A1 and D1/B1 at the dark end
+      of the input range.</font></p>
+      <p><font face="Arial">If the ISO value is doubled and the light input
+      halved as in bar 2, then correct exposure is maintained. Now the S/N has
+      been reduced to L2/A2&nbsp; and D2/B2 at the two ends of the input range
+      2.</font></p>
+      <p><font face="Arial">Doubling ISO again decreases S/N even further&nbsp;
+      as in case 3.&nbsp;</font></td>
+  </tr>
+</table>
+<p><font face="Arial">It is obvious from this example that the noise in the dark
+portions of a digital photograph will always be higher than in the bright
+portions. An increase in ISO always means an increase in noise and a decrease in
+dynamic range. A <a href="camera&#32;lens.htm">compact camera</a> suffers
+especially from this because its light sensor uses a very small area for
+collecting photons in each of its pixel locations. Light sensitivity is directly
+proportional to pixel area. The electrical noise, though, is about constant
+regardless of sensor size. Thus the superior S/N of a larger sensor with the
+same number of pixels.</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#808080">5 - CCD photo sensor - <a name="S/N measurement procedure"> S/N measurement
+procedure</a></font></h1>
+<table border="0" width="100%" cellpadding="5">
+  <tr>
+    <td width="50%" valign="top"><img border="0" src="dpp&#32;photos/noise_test.jpg" width="500" height="333"></td>
+    <td valign="bottom"><font face="Arial">For <a href="ccd_noise1.htm">dark
+      noise</a> measurements a lens cap can be used or a 1.5&quot; ABS pipe end
+      cap to shield the camera sensor from all incoming light.&nbsp;</font>
+      <p><font face="Arial">An </font><a href="http://www.expodisc.com" target="_blank"><font face="Arial">ExpoDisc</font></a><font face="Arial">
+      which is taped to a 1.5&quot; ABS pipe coupler and held over the extended
+      D-Lux 3 lens can be used to measure the camera's S/N for different ISO and
+      exposure settings. It clips directly to the front of the V-Lux 1 lens with
+      the appropriate thread adaptor.&nbsp; It is much more convenient to use
+      for S/N measurements than a gray card.</font></td>
+  </tr>
+</table>
+<p><font face="Arial">&quot;The target WHITE DENSITY RATING of the ExpoDisc is
+0.745 which corresponds to an 18% reflectance of incident light. This density
+(18% reflectance) falls within Zone V ± 1/6 f/stop. Zone V ± 1/6 f/stop has a
+range of 0.695 to 0.795. No adjustments need to be made.&quot; (<a href="http://www.expodisc.com/support/faq.php?cat_id=3#q12" target="_blank">FAQ
+12</a>)</font></p>
+<p><font face="Arial">The White Balance in the camera is set to compensate for
+the color of the incoming diffuse light, so no special lighting is needed for
+the tests. The gray photos are measured using the Histogram window in Photoshop
+Elements 6. It reads out the Mean and <a href="pixel-stats1.xls" target="_blank">Standard
+Deviation</a> of the selected pixel area. I usually take a square area of about
+120k pixels in 100% screen display mode. Noise reduction must be set to zero in
+ACR for RAW file noise measurements, obviously. Both, Color and Luminosity
+(gray) Channel values are measured. It is interesting to observe the change in
+distribution function. The Info window in PE6 allows measurement of individual
+pixel RGB levels. The range of output levels goes from zero to 256 = 2<sup>8</sup>
+and covers 8 octaves or f-stops. Normal exposure is at a seemingly high level of
+150 = 2<sup>7.23</sup> </font><font face="Arial">due to sensor non-linearity and
+compression of the photon input signal range into a narrower output voltage
+range.</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#808080">6 - Camera output signal and noise
+measurements</font></h1>
+<p><font face="Arial">For camera comparison purposes all transfer function
+measurements were taken at ISO 400 where the noise level was expected to be
+high, but where scene photos of useable quality can hopefully still be taken.
+The camera with the ExpoDisc in front of the lens was pointed towards a light
+source to obtain an exposure time of 1/15 s at f:2.8. Lens focus was manually
+set to infinity. White balance was adjusted automatically in the camera. Nine
+RAW files were then generated with manually set exposure times ranging from
+1/500 s to 1/2 s.</font></p>
+<p><font face="Arial">The nine photos were opened with Adobe Camera Raw in
+Photoshop Elements 6. ACR default settings were used except that all noise
+reduction was set to zero. A 120k pixel square from the center of the photo was
+then measured with the Histogram window functions of PE6. The results for Mean
+and Standard Deviation were recorded in a spreadsheet.&nbsp;<br>
+Strictly speaking, it is a measurement of signal plus noise where the signal is
+characterized by the Mean and the noise by the Std. Dev. which is akin to the
+RMS-value of an electrical voltage.<br>
+The example is for the Lumix LX2.</font></p>
+<table BORDER="1" CELLSPACING="1" CELLPADDING="2" WIDTH="538" bgcolor="#FFFFFF">
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">RAW<br>
+      file#</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="LEFT">Relative<br>
+      Exposure</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Aperture f:</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Time 1/</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Colors<br>
+      Mean</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Colors<br>
+      Std Dev</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Luminos.<br>
+      Mean</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Luminos.<br>
+      Std Dev</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">66</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">254.99</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">0.11</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">254.99</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">0.08</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">65</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">233.08</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.91</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">231.26</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.39</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">64</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">188.46</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">5.52</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">186.37</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.39</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" BGCOLOR="#C0C0C0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">58</font></td>
+    <td WIDTH="13%" BGCOLOR="#C0C0C0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">0</font></td>
+    <td WIDTH="12%" BGCOLOR="#C0C0C0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" BGCOLOR="#c0c0c0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">15</font></td>
+    <td WIDTH="12%" BGCOLOR="#c0c0c0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">150.55</font></td>
+    <td WIDTH="12%" BGCOLOR="#c0c0c0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">6.79</font></td>
+    <td WIDTH="13%" BGCOLOR="#c0c0c0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">148.65</font></td>
+    <td WIDTH="12%" BGCOLOR="#c0c0c0" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.16</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">59</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">-1</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">30</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">86.83</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8.15</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">85.1</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.96</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">60</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">-2</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">60</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">51.11</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8.79</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">50.67</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.54</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">61</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">-3</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">125</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">27.7</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">9.38</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">27.26</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.77</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">62</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">-4</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">250</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">13.05</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8.49</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">12.94</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.60</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">63</font></td>
+    <td WIDTH="13%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">-5</font></td>
+    <td WIDTH="12%" HEIGHT="16" background="../images/graphics/bg-notepaper1.gif"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">500</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">5.07</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">6.7</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.36</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.56</font></td>
+  </tr>
+</table>
+<p><font face="Arial">The</font><font face="Arial"> graphs of&nbsp; Mean and
+Std. Dev. give a first impression of their dependency upon exposure. The Mean
+does not change linearly with exposure, but the horizontal axis is exponential
+while the vertical axis of the graph is linear. Saturation of the sensor is
+indicated by a value of 255. At exposure step +3 above normal the Std. Dev. goes
+to zero due to saturation and voltage clipping. The output color turns to white.
+.Towards very low exposure (-5) the noise decreases also because more of it just
+turns to black</font><font face="Arial">.&nbsp;</font></p>
+<table border="0" cellpadding="2">
+  <tr>
+    <td width="50%"><font face="Arial"><b>A - LX2<br>
+      </b></font><img border="0" src="dpp&#32;graphics/ccd_no4.gif" width="395" height="326"></td>
+    <td width="50%"><font face="Arial"><b>B - LX2<br>
+      </b></font><img border="0" src="dpp&#32;graphics/ccd_no5.gif" width="399" height="324"></td>
+  </tr>
+</table>
+<p><font face="Arial">It becomes more informative when the vertical scale is in
+exponential units like the horizontal scale. Then 256 becomes 2<sup>8</sup> and
+the tick mark is 8. Therefore tick mark 2 corresponds to 2<sup>2</sup> = 4. Also
+it is of interest to directly plot the ratio of Mean to Std. Dev. which I call
+the signal-to-noise ratio S/N. This is done for the four cameras under
+investigation.</font></p>
+<h3><font face="Arial" color="#808080">Camera tests</font></h3>
+<p><font face="Arial">In the Mean graphs below, the k=0.xy slope line
+approximates the slope of the transfer curve around and below normal exposure at
+0. Picture contrast is reduced relative to this for flatter portions of the
+measured curve. Contrast is increased where the curve is steeper.</font></p>
+<p><font face="Arial">The slope=1 line in the S/N graphs indicates how the S/N
+should increase theoretically with exposure if the sensor noise is additive and
+not multiplicative. The S/N at exposure level 3 goes to a large value if the
+sensor has not yet fully saturated. The S/N goes to zero if the sensor is
+already saturated at level 3.&nbsp;</font></p>
+<table border="0" cellpadding="2">
+  <tr>
+    <td width="50%"><font face="Arial"><b>1 - LX2</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no6.gif" width="402" height="373"></font></td>
+    <td width="50%"><font face="Arial"><b>2 - LX2</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no7.gif" width="397" height="373"></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Arial"><b>3 - D-Lux 3</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no8.gif" width="402" height="373"></font></td>
+    <td width="50%"><b><font face="Arial">4 - D-Lux 3</font></b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no9.gif" width="397" height="373"></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Arial"><b>5 - FZ50</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no10.gif" width="402" height="373"></font></td>
+    <td width="50%"><font face="Arial"><b>6 - FZ50</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no11.gif" width="397" height="373"></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><font face="Arial"><b>7 - V-Lux 1</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no12.gif" width="402" height="373"></font></td>
+    <td width="50%"><font face="Arial"><b>8 - V-Lux 1</b><br>
+      <img border="0" src="dpp&#32;graphics/ccd_no13.gif" width="397" height="373"></font></td>
+  </tr>
+</table>
+<p><font face="Arial"><u>Observations:</u><br>
+- No difference between 7 and 5.<br>
+- 8 has higher color and luminance noise than 6.<br>
+- 3 has a shallower slope overall than 1 and less contrast.<br>
+- 4 has less color and luminance noise than 2, particularly for lower light
+levels.<br>
+It is not clear to what the degree the magnitude of differences matters in a
+practical sense.<br>
+</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#808080">7 - ISO setting and S/N</font></h1>
+<p><font face="Arial">The influence ISO setting upon the output S/N is tested
+for RAW and JPG files by letting the ISO selection control the number of photons
+that impinge upon the sensor. The light source is again adjusted for an exposure
+of 1/15 s at f:2.8 and ISO 400.&nbsp;</font></p>
+<table BORDER="1" CELLSPACING="1" CELLPADDING="2" WIDTH="538" background="../images/graphics/bg-notepaper1.gif">
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">RAW<br>
+      file#</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">ISO</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Aperture f:</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Time 1/</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Colors<br>
+      Mean</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Colors<br>
+      Std Dev</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Luminos.<br>
+      Mean</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">Luminos.<br>
+      Std Dev</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">471</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">100</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">143</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.99</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">143</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.34</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">470</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">200</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">146</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.16</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">145</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.01</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">467</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">400</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">15</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">147</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">7.09</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">145</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.97</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">468</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">800</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">30</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">148</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">9.05</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">145</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.74</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">469</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1600</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">60</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">149</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">10.21</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">148</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4.63</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">JPG<br>
+      file#</font></td>
+    <td WIDTH="13%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="12%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="13%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="12%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="12%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="13%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+    <td WIDTH="12%" HEIGHT="16">
+      <p>&nbsp;</p>
+    </td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">471</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">100</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">4</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">144</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.33</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">144</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.6</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">470</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">200</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">8</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">147</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.44</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">147</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.51</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">467</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">400</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">15</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">146</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.84</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">147</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#C0C0C0"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.59</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">468</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">800</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">30</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">148</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.82</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">147</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1.82</font></td>
+  </tr>
+  <tr>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">469</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">1600</font></td>
+    <td WIDTH="12%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.8</font></td>
+    <td WIDTH="13%" HEIGHT="16"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">60</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">148</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">3.35</font></td>
+    <td WIDTH="13%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">149</font></td>
+    <td WIDTH="12%" HEIGHT="16" bgcolor="#FFFFFF"><font FACE="Arial" SIZE="2">
+      <p ALIGN="CENTER">2.02</font></td>
+  </tr>
+</table>
+<p><font face="Arial">The resulting graphs for the four cameras are shown
+below.&nbsp;</font></p>
+<h2><font face="Arial" color="#808080">Camera tests</font></h2>
+<p><font face="Arial">The line with a slope of -0.5 seems to be the rate at which
+the S/N would decrease theoretically with increasing ISO in RAW mode. If the
+measured lines do not follow this slope then it could be an indication that the
+RAW data from multiple pixels are post processed or that the pixel output values
+are no longer independent from each other. It is surprising, though, that the
+slope should be 1/sqrt( ISO ) when with each doubling of ISO the number of
+photons, which is collected by the sensor, is halved. This needs further
+investigation but for my camera comparison here it would not seem to matter.</font></p>
+<p><font face="Arial">The S/N in JPG mode is higher than in RAW, because the
+noise is averaged. This means that pixel output values are smeared together. The
+magnitude of this changes with ISO and in all cases becomes more pronounced at
+ISO 400 and above. The JPG curves do not indicate how smartly the processing is
+done. They only show the resulting change in standard deviation.</font></p>
+<table border="0">
+  <tr>
+    <td width="50%"><font face="Arial"><b>9 - LX2<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no14.gif" width="385" height="317"></b></font></td>
+    <td width="50%"><font face="Arial"><b>10 - LX2<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no15.gif" width="418" height="322"></b></font></td>
+  </tr>
+  <tr>
+    <td width="50%"><b><font face="Arial">11 - D-Lux 3<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no16.gif" width="385" height="317"></font></b></td>
+    <td width="50%"><b><font face="Arial">12 - D-Lux 3<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no17.gif" width="418" height="322"></font></b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b><font face="Arial">13 - FZ50<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no18.gif" width="385" height="317"></font></b></td>
+    <td width="50%"><b><font face="Arial">14 - FZ50<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no19.gif" width="418" height="322"></font></b></td>
+  </tr>
+  <tr>
+    <td width="50%"><b><font face="Arial">15 - V-Lux 1<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no20.gif" width="385" height="317"></font></b></td>
+    <td width="50%"><b><font face="Arial">16 - V-Lux 1<br>
+      <img border="0" src="dpp&#32;graphics/ccd_no21.gif" width="418" height="322"></font></b></td>
+  </tr>
+</table>
+<h2><font face="Arial" color="#808080">Observations</font></h2>
+<p><font face="Arial">
+- 15 has less color noise than 13 at ISO 100 and 200.<br>
+- 16 uses stronger color noise averaging than 14.<br>
+- 9 has higher color noise above ISO 400 and less below it than 11.<br>
+- 12 has less luminance noise than 10.</font></p>
+<p><font face="Arial">
+I do not see major systematic differences between the Leica and equivalent Lumix
+camera models as function of ISO setting and JPG processing.&nbsp;</font></p>
+<p><font face="Arial">All Picture Adjustments in the four cameras had been set
+to STD.</font></p>
+<p><font face="Arial">The measured and calculated data can be found in the </font><font face="Arial"><a href="S-N-tests1.xls" target="_blank">S-N-tests1.xls</a>
+spreadsheet.</font></p>
+<p><font face="Arial">For a summary see the<a href="lumix-leica.htm"> Lumix
+&amp; Leica</a> page.</font></p>
+<p><font face="Arial">&nbsp;</font></p>
+<h1><font face="Arial" color="#808080">8 - General applicability of the S/N
+tests</font></h1>
+<p><font face="Arial">The measurement of the light input to pixel output
+transfer function and its signal-to-noise ratio versus exposure level is easily
+performed with just a few tools like an ExpoDisc, lens adapters and photo
+processing software. So is the measurement of S/N for RAW and JPG modes. The
+test procedure is simple and can be readily duplicated. This opens up the
+possibility of collecting data for a large variety of cameras that could be
+posted on the Internet. The data could serve as a basis for comparison and
+possibly camera selection. I am not about to start something like this, though I
+would be interested in seeing the results for any follow up models to the Leica
+and Lumix models that I tested.</font></p>
+<p><font face="Arial"><br>
+</font></p>
+<p><font face="Arial">-- <font color="#000000"><a href="introduction.htm">Introduction</a></font>
+-- <a href="camera&#32;lens.htm">Lens
+&amp; image</a> -- <a href="A-D-conversion.htm">A/D conversion</a> -- <a href="lumix-leica.htm">Lumix &amp; Leica</a> --&nbsp;
+<a href="sharpness.htm">Sharpness</a> -- <a href="ccd_noise1.htm">CCD noise1</a> -- <a href="ccd_noise2.htm"><font color="#808080"><b>CCD
+noise2</b></font></a> --&nbsp;<a href="5-years-later.htm">5 years later</a> --&nbsp;</font></p>
+<p>&nbsp;</p>
+&nbsp;<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="../IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="../images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='ccd_noise2.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public/dpp';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>

@@ -1,0 +1,626 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="description" content="Driver limitations in frequency response and excursion capability that lead to acoustic crossover requirements">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="keywords" content="Linkwitz-Riley, 24 dB/oct, excursion, Butterworth, 6 dB/octave, crossover">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Crossovers</title>
+<meta name="Microsoft Border" content="tlb, default">
+</head>
+
+<body stylesrc="index.htm" background="images/graphics/bg-sand4.gif"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="left"><a href="index.htm"><img border="0" src="_borders/banner-1.gif" width="620" height="99"></a>
+</p>
+
+<div align="center">
+  <center>
+  <table border="0" cellspacing="1">
+    <tr>
+      <td width="100%">
+        <p align="center"><font FACE="Arial" SIZE="2">&nbsp;<a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-3b.jpg" width="115" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="images/photos/LXmini-s.jpg" width="66" height="100"></a>&nbsp;
+        <a href="LXmini/Introduction.htm"><img border="0" src="_borders/lxmini-1b.jpg" width="58" height="100"></a>&nbsp;
+        <a href="LXmini/LXmini+2.htm"><img border="0" src="images/photos/LXmini2-2s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="LXmini/LXstudio.htm"><img border="0" src="images/photos/LXstudio-s.jpg" width="67" height="100"></a>
+        &nbsp;<a href="LX521/LX521_4.htm"><img border="0" src="_borders/LX521-top100.jpg" width="85" height="100"></a>&nbsp;
+        <a href="LX521/LX521_4.htm"><img border="0" src="images/photos/LX521-s.jpg" width="67" height="100"></a>&nbsp;
+        <a href="orion_challenge.htm"><img border="0" src="_borders/orion-4f.jpg" width="56" height="100"></a>
+        &nbsp;<a href="orion_asp.htm"><img border="0" src="images/photos/IMG_1065c100s.jpg" width="79" height="100"></a>
+        &nbsp;<a href="Pluto/electronics.htm"><img border="0" src="_borders/module484-100.jpg" width="91" height="100"></a>&nbsp;
+        <a href="Pluto/Pluto-2.1.htm"><img border="0" src="images/photos/Pluto-SPC-s2.jpg" width="67" height="100"></a>&nbsp;
+        &nbsp;&nbsp;
+        <a href="Pluto/supplies.htm"><br>
+        </a><span style="letter-spacing: 5pt">----- Experience in your own room
+        the magical nature of stereo sound -----</span></font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<h4>&nbsp;</h4>
+
+<table border="0" width="100%" cellspacing="4" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif" align="center"><a href="about_me.htm"><img border="0" src="images/photos/sl3-100.jpg" width="100" height="145"></a></td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Basics</b></font></p>
+<p><font face="Arial" size="2"><b><a href="The_Magic/The_Magic.htm">The Magic
+in 2-Channel Sound</a></b></font></p>
+<p><a href="frontiers.htm"><font face="Arial" size="2">Issues in speaker<br>
+design</font></a></p>
+<p><font face="Arial" size="2"><a href="models.htm">Dipole
+models</a></font></p>
+<p><font face="Arial" size="2"> <a href="filters.htm">Active
+filters</a></font></p>
+<p><font face="Arial" size="2"><a href="Amplifiers-etc/Distortion.htm">Amplifiers
+etc</a></font></p>
+<p><font face="Arial" size="2"><a href="sys_test.htm#Mic">Microphone</a></font></p>
+<p><font face="Arial" size="2"><a href="faq.htm">FAQ's</a></font></p>
+<p><font face="Arial" size="2"><a href="speakers.htm">Loudspeakers</a></font></p>
+<p><font face="Arial" size="2"><a href="crossovers.htm">Crossovers</a></font></p>
+<p><font face="Arial" size="2"><a href="rooms.htm">Room acoustics</a></font></p>
+<p><font face="Arial" size="2"><a href="Recording/AS_creation.htm">Stereo
+Recording and Rendering</a></font></p>
+<p><font face="Arial" size="2"><a href="Audio_production/sf_symphony.htm">Audio production</a></font></p>
+<p><font face="Arial" size="2"><a href="conclusions.htm">Conclusions</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif">
+<p><font face="Arial" color="#ff0000" size="4"><b>Projects</b></font></p>
+<p><b><font face="Arial" size="2"><a href="Fitz/considerations.htm">Your
+own desig</a></font></b></p>
+<p><font face="Arial" size="2"><a href="LXmini/Introduction.htm"><b>LXmini</b></a></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXmini+2.htm">LXmini+2</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LXmini/LXstudio.htm">LXstudio</a></b></font></p>
+<p><font face="Arial" size="2"><b><a href="LX521/LX521_4.htm">LX521.4</a></b></font></p>
+<p><a href="LX521/Description.htm"><font face="Arial" size="2">LX521<br>
+reference</font></a></p>
+<p><font face="Arial" size="2"><a href="orion_challenge.htm">ORION<br>
+challenge</a></font></p>
+<p><font face="Arial" size="2"><a href="orion-rev3.htm">ORION-3.4</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/Pluto-2.1.htm">PLUTO-2.1</a></font></p>
+<p><font face="Arial" size="2"><a href="Watson/watson.htm">WATSON-SEL</a></font></p>
+<p><font face="Arial" size="2"><a href="Pluto/subwoofer.htm">PLUTO+<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="thor-intro.htm">THOR<br>
+subwoofer</a></font></p>
+<p><font face="Arial" size="2"><a href="builtown.htm">PHOENIX<br>
+dipole speaker</a></font></p>
+<p><font face="Arial" size="2"><a href="Removed&#32;pages/x-sb80-3wy.htm">Three-Box active<br>
+system (1978)</a></font></p>
+<p><font face="Arial" size="2"><a href="reference_earphones.htm">Reference<br>
+earphones</a></font></p>
+<p><font face="Arial" size="2"><a href="surround_system.htm">Surround<br>
+sound</a></font></p>
+<p><font face="Arial" size="2"><a href="Loudspeaker-Room/tests&amp;measurements.htm">Loudspeaker<br>
+&amp; Room</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" width="100%" cellpadding="5" bgcolor="#FFFFFF" cellspacing="4">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF" background="images/graphics/bg-notepaper1.gif"><font face="Arial" color="#ff0000" size="4"><b>Resources</b></font>
+      <p>
+<font face="Arial" size="2"><a href="publications.htm">Publications</a></font>
+      </p>
+      <p><font face="Arial" size="2"><a href="sound_picture_cd.htm">Sound
+      recordings</a></font></p>
+<p><font face="Arial" size="2"><a href="links.htm">Links</a></font></p>
+<p><font face="Arial" size="2"><a href="Constant_directivity_louds.htm">Other
+designs</a></font></p>
+<p><font face="Arial" size="2"><a href="my_setup.htm">My current setup</a></font></p>
+<p><font face="Arial" size="2"><a href="about_me.htm">About me</a></font></p>
+<p><font face="Arial" size="2"><a href="page_index.htm">Site map</a></font></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="index.htm"><b><font face="Arial" size="4" color="#008080">HOME</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000" size="3" face="Arial"><i>------------------<br>
+      </i></font><font color="#000000"><a href="dpp/introduction.htm"><font size="3" face="Arial">Digital
+      Photo<br>
+      Processes</font></a></font></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Sea-Ranch/northern_california.htm">The<br>
+      Sea Ranch</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<p>&nbsp;</p>
+
+<table border="0" width="100%" bgcolor="#FFFFFF" cellspacing="4" cellpadding="5">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><font color="#FF0000">------------------</font><br>
+      <a href="Monika/MyDaughterTheJeweler.htm">My Daughter<br>
+      the Jeweler</a></b></font>
+    </td>
+  </tr>
+</table>
+
+<h4>&nbsp;</h4>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF"><a href="What_is_new_at_linkwitzlab.htm"><b><font face="Arial" color="#008080" size="4">What's
+      new</font></b></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><b><a href="Store/windows.htm" target="_blank"><font face="Arial" size="4" color="#008080">LX
+      - Store</font></a></b></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="Fitz/considerations.htm" target="_blank"><b><font face="Arial" color="#008080" size="3">Conversations<br>
+      with Fitz</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<table border="3" width="100%" bgcolor="#FFFFFF" cellpadding="5" cellspacing="1" bordercolor="#008080">
+  <tr>
+    <td width="100%" bgcolor="#FFFFFF">
+      <p align="center"><a href="http://oplug-support.org/" target="_blank"><b><font face="Arial" color="#008080" size="3">OPLUG<br>
+      Forum</font></b></a></p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#FF0000">Crossovers</font></h1>
+<p><font face="Arial">--- <b>Crossovers</b> --- <a href="JAES/jaes_papers76.htm">Linkwitz/Riley</a>
+--- <a href="filters.htm">Active filters</a> ---</font></p>
+<p>&nbsp;</p>
+<h1><font face="Arial" color="#008080">Crossovers</font></h1>
+<table border="0" width="100%" cellspacing="4" cellpadding="15" bgcolor="#FFFFFF">
+  <tr>
+    <td width="100%" background="images/graphics/bg-notepaper1.gif"><font face="Arial"><b><i>The
+      best crossovers ...</i></b></font>
+      <p><font face="Arial"><i>The best electrical crossover filter is one that
+      maintains the </i></font><font face="Arial"><i>acoustic polar response of
+      a loudspeaker throughout the crossover frequency range as output shifts
+      from one driver to the next. The sum of acoustic lowpass and highpass
+      outputs must have allpass behavior without high Q peaks in the group
+      delay. The highpass filter section must attenuate out-of-band driver
+      terminal voltages at a sufficiently high rate so that cone excursion
+      decreases with decreasing frequency and nonlinear distortion is minimized.</i></font></p>
+      <p align="right"><font face="Arial" color="#008080" size="5"><i><b>The
+      crossover must be inaudible</b></i></font></p>
+      <p><font face="Arial"><i>The crossover must be inaudible on program
+      material. This also implies that the power response of the two drivers
+      must be similar in the crossover region, and that requires special
+      attention during the loudspeaker's concept and design phases.</i></font></p>
+      <p><font face="Arial"><i>Crossovers may be implemented either as passive
+      RLC networks, as active filters with operational amplifier circuits or
+      with DSP engines and software. The only excuse for passive crossovers is
+      their low cost. Their behavior changes with the signal level dependent
+      dynamics of the drivers. They block the power amplifier from taking
+      maximum control over the voice coil motion. They are a waste of time, if
+      accuracy of reproduction is the goal.</i></font></p>
+      <p align="left"><font face="Arial"><i><a href="accurate&#32;stereo&#32;performance.htm">Accurate
+      Stereo</a> performance
+      tests&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      SL - October 2009&nbsp;</i></font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font size="3" face="Arial">It is practically impossible for a single
+radiator to cover the 20 Hz to 20 kHz audio frequency range at adequate sound
+pressure levels (SPL) and with wide dispersion off-axis. At a 50 Hz bass
+frequency, for example, it takes an air volume displacement of 214 cm<sup>3</sup>
+to generate 90 dB SPL at 1 m distance from the source in free space. Take a typical 6.5
+inch (132 mm effective) diameter driver and its cone would have to move 14 mm
+peak-to-peak linearly, which by far exceeds its excursion capability (<a href="publications.htm">Ref.
+4</a>).&nbsp;<br>
+At 1000 Hz, though, the same driver would have to vibrate only with (50/1000)<sup>2</sup>
+= 1/400<sup>th</sup>
+of this excursion for the same 90 dB SPL, but now the cone is in its breakup
+region and no longer acts as a rigid piston, causing energy storage and
+deteriorating off-axis radiation. Thus, this driver will have to be complemented
+with a larger one for low frequencies, and a smaller one to extend the highs, in
+order to obtain full frequency range coverage. The electrical audio signal then
+needs to be divided between three drivers.</font></p>
+<p><font size="3" face="Arial">The proper crossover of signals from one driver
+to the next is a subject of debate amongst audiophiles with some preferring a1st
+order Butterworth filter function . As often done, a single capacitor and
+resistor in the connection to the tweeter will not necessarily create a
+phase-linear 6 dB/octave crossover, but more something like a 18 dB/oct.
+acoustic response due to the inherent 12 dB/oct. highpass behavior of the
+tweeter itself. Furthermore, the tweeter will contribute a good amount of
+intermodulation distortion because the cone excursion wants to rise at 12 dB/oct.
+towards lower frequencies for constant SPL and the driver is not built for that.
+Add to this the wide frequency coverage overlap between tweeter and midrange,
+with the resulting irregular polar radiation pattern, and the 6 dB/oct.
+crossover becomes a costly solution for achieving waveform fidelity. At best,
+the goal may be obtained over a very small region in space and over a limited
+frequency range. But, does it matter to the listening experience, given some
+common <a href="speakers.htm" target="_blank">observations</a>?</font></p>
+<p><font size="3" face="Arial">Networks that divide the electrical audio signal
+between different drivers must be designed with the driver characteristics and
+the driver layout in mind in order to obtain the desired acoustic crossover
+function and polar radiation pattern in conjunction with tolerable non-linear
+and linear distortion of the acoustic output. All crossovers involve design
+tradeoffs. For the <a href="links.htm">Audio Artistry</a> Beethoven-Elite
+system, for example, I used 24 dB/oct. and 12 dB/oct. Linkwitz-Riley (<a href="publications.htm">Ref.
+17</a>) and 6 dB/oct. Butterworth acoustic crossover filter responses. My latest
+design, the <a href="orion_challenge.htm">ORION</a>, employs two 24 dB/oct
+filters for highest accuracy of perceived sound.</font></p>
+<p><font size="3" face="Arial">I have a strong preference for line level active
+dividing networks ahead of the power amplifiers (<a href="publications.htm">Ref.
+2, 12, 17</a>). In this approach the power amplifier output is connected
+directly - except for a very low resistance speaker cable - to the voice coil of
+the driver. The amplifier takes maximum control over the motion of the speaker
+cone which gives a greater sense of clarity and dynamism compared to a passive
+dividing network between amplifier and driver. Active crossovers make much more
+effective use of amplifier power. A clipping woofer amplifier is not seen by the
+tweeter, which has its own amplifier. The clipping of the woofer amplifier may not even be
+noticed in this case. It would surely be heard with a passive crossover, where
+it might even overheat and damage the tweeter, because of the large amount of
+high frequency energy in the clipped signal.</font></p>
+<p><font size="3" face="Arial">Crossover filters for a speaker usually incorporate frequency response corrections for the individual drivers to obtain
+a desired overall response. The active network has the advantage of correcting
+easily for different sensitivities of drivers and equalizing not only the
+individual drivers but the combined response as well. Not having to deal with
+the interaction between driver impedance and passive filter network gives the
+designer of an active crossover/equalizer much greater freedom and control to
+develop a superior product.</font></p>
+<p><font size="3" face="Arial"><a href="frontiers_5.htm#V">Crossover topology
+mistakes</a></font></p>
+<p align="center">------------------------------------------------------
+<p>&nbsp;</p>
+<h3><font face="Arial" color="#008080">The <a name="Duelund">Duelund</a> 3-way
+crossover filter function D3</font></h3>
+<p><font face="Arial">Recently I received an intriguing paper of the late <a target="_blank" href="http://www.gryphon-audio.dk/files/duelund/duelund.html">Steen
+Duelund</a> from one of his admiring followers. Steen, a &quot;Danish Speaker
+Maniac&quot;, gives a fun derivation of known crossover filter functions for the
+mathematically inclined and he found some novel ones. To follow his text more
+easily I rewrite some of it here and develop it further to show a potentially
+useful 3-way allpass crossover filter.</font></p>
+<p><font face="Arial" color="#008080"><b>A) Transient-perfect crossovers</b></font></p>
+<p><font face="Arial"><b>1)</b> - First order crossover with 6 dB/oct slopes for
+highpass and lowpass filters = Butterworth, B1+</font></p>
+<p><font face="Arial">H<sub>1</sub>(s) = (s + 1) / (s + 1) = 1&nbsp; where s = </font><font face="Symbol">s</font><font face="Arial">
++j</font><font face="Symbol">w </font><font face="Arial">and the pole at </font><font face="Symbol">s</font><font face="Arial"><sub>p</sub>
+= -1 and zero at </font><font face="Symbol">s</font><font face="Arial"><sub>z</sub>
+= -1 cancel each other</font><font face="Symbol"><br>
+</font><font face="Arial">H<sub>1</sub> = [s / (s + 1)] + [1 / (s + 1)] = HP +
+LP ==&gt; 2-way</font></p>
+<p><font face="Arial"><b>2)</b> - Second order crossover by squaring H<sub>1</sub>(s)
+==&gt; Baekgaard</font></p>
+<p><font face="Arial">(H<sub>1</sub>)<sup>2</sup> = (s<sup>2</sup> + 2s + 1) /
+(s + 1)<sup>2</sup>&nbsp;<br>
+(H<sub>1</sub>)<sup>2 </sup>= [s<sup>2</sup> / (s + 1)<sup>2</sup>] + [2s / (s +
+1)<sup>2</sup>] + [1 / (s +1)<sup>2</sup>] = HP + BP + LP ==&gt; 3-way&nbsp; [1]</font></p>
+<p><font face="Arial">Highpass and lowpass filters have 12 dB/oct slopes, but
+the filler bandpass filter has only 6 dB/oct slopes and is difficult to realize.
+At the crossover frequencies </font><font face="Symbol">w</font><font face="Arial"><sub>1</sub>
+= 0.5 and </font><font face="Symbol">w</font><font face="Arial"><sub>2</sub> = 2
+the three outputs are not in phase and the axis of the vertical polar pattern
+will tilt when the three separate drivers are aligned vertically. This can be
+avoided by using two filler drivers in a W-F-T-F-W arrangement instead of
+W-F-T.&nbsp;</font></p>
+<p><font face="Arial">More practical solutions of transient-perfect crossovers
+are based on delay derived crossovers where&nbsp; HP(s) = e-<sup>sT</sup> - LP(s)&nbsp;
+[2] or they are constructed from lowpass and highpass filters which overlap in
+the crossover region in such a way that a minimum phase response is preserved
+[3]. Their summed response is not flat, but since it is minimum phase it can be
+equalized. Steeper slopes can be obtained from these two types of crossovers,
+but the lack of in-phase addition in the crossover region tends to require
+symmetrical driver arrangements.</font></p>
+<p><font face="Arial">For further study I recommend:<br>
+&nbsp;&nbsp;&nbsp; [1] E. Baekgaard, &quot; A novel approach to linear-phase
+loudspeakers using passive crossover networks&quot;<br>
+<a target="_blank" href="http://www.aes.org/journal/">JAES</a>, Vol. 25, pp.
+284-294, May 1977<br>
+&nbsp;&nbsp;&nbsp; [2] S. Lipshitz &amp; J. Vanderkooy, &quot;A family of
+linear-phase crossover networks of high slope derived by time delay&quot;, JAES,
+Vol. 31, pp. 2-19, January/February 1983<br>
+&nbsp;&nbsp;&nbsp; [3] S. Lipshitz &amp; J. Vanderkooy, &quot;Use of frequency
+overlap and equalization to produce high-slope linear-phase loudspeaker
+crossover networks&quot;, JAES, Vol. 33, pp. 114-126, March 1985</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" color="#008080"><b>B) Allpass crossovers</b></font></p>
+<p><font face="Arial"><b>3)</b></font><font face="Arial"> - First order
+crossover with 6 dB/oct slopes for highpass and lowpass filters = Butterworth,
+B1-&nbsp;</font></p>
+<p><font face="Arial">H<sub>2</sub>(s) = (s - 1) / (s + 1) = 1e<sup>j</sup></font><sup><font face="Symbol">f&nbsp;&nbsp;</font></sup><font face="Arial">
+when s = j</font><font face="Symbol">w,&nbsp; </font><font face="Arial">i.e. the
+magnitude is one, but there is phase shift </font><font face="Symbol">F</font><font face="Arial">(</font><font face="Symbol">w</font><font face="Arial">)</font></p>
+<p><font face="Arial">The pole at </font><font face="Symbol">s</font><font face="Arial"><sub>p</sub>
+= -1 and zero at </font><font face="Symbol">s</font><font face="Arial"><sub>z</sub>
+= +1 do not cancel but form a 1st order allpass.</font></p>
+<p><font face="Arial"><b>4)</b> - 2nd order Linkwitz-Riley filter (12 dB/oct,
+LR2)&nbsp;</font></p>
+<p><font face="Arial">H<sub>2</sub> H<sub>1</sub> = (s - 1) (s + 1) / (s +1) (s
++ 1) = (1 - s<sup>2</sup>) / (s + 1)<sup>2</sup><br>
+H<sub>2</sub> H<sub>1</sub> = [1 / (s + 1)<sup>2</sup>] - [s<sup>2</sup> / (s +
+1)<sup>2</sup>] = LP - HP&nbsp; ==&gt; 2-way and 1st order allpass as above.</font></p>
+<p><font face="Arial">HP and LP are 2 x 90 degrees out of phase at all
+frequencies and the polarity of one driver must be reversed to obtain allpass
+behavior.</font></p>
+<p><font face="Arial"><b>5)</b> - Squaring H2(s) and going to a more general
+expression by replacing '2' with 'a'</font></p>
+<p><font face="Arial">(H<sub>2</sub>)<sup>2</sup> = (s<sup>2</sup> - 2s + 1) /
+(s<sup>2</sup> + 2s +1)<br>
+H<sub>3</sub> = (s<sup>2</sup> - as + 1) / (s<sup>2</sup> + as +1)</font></p>
+<p><font face="Arial"><b>6)</b> - 4th order Linkwitz-Riley filter (24 dB/oct,
+LR4) by squaring H<sub>3</sub></font></p>
+<p><font face="Arial">(H<sub>3</sub>)<sup>2</sup> = (s<sup>2</sup> - as +1)<sup>2</sup>
+/ (s<sup>2</sup> + as +1)<sup>2</sup> = [s<sup>4</sup> - s<sup>2</sup>(a<sup>2</sup>
+- 2) + 1] / (s<sup>2</sup> + as + 1)<sup>2</sup></font></p>
+<p><font face="Arial">Let <b>a = sqrt(2)</b> = 1.41, then</font></p>
+<p><font face="Arial">H<sub>4</sub> = (s<sup>4</sup> + 1) / (s<sup>2</sup> +
+1.41s + 1)<sup>2</sup>&nbsp; ==&gt; 2-way<br>
+which is a 2nd order allpass with a complex pole pair at&nbsp; -0.71 +/-
+j0.71&nbsp;<br>
+and a pair of complex zeros at +0.71 +/- j0.71 in the right half s-plane.&nbsp;<br>
+The individual filter functions are:</font></p>
+<p><font face="Arial">HP<sub>4</sub> = s<sup>4</sup> / (s<sup>2</sup> + 1.41s +
+1)<sup>2&nbsp;</sup>&nbsp; and&nbsp;&nbsp;&nbsp;&nbsp; LP<sub>4</sub> = 1 / (s<sup>2</sup>
++ 1.41s + 1)<sup>2&nbsp;</sup>&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p><font face="Arial">HP and LP are 4 x 90 degrees out of phase at all
+frequencies, i.e. they are in-phase.</font></p>
+<p><img border="0" src="images/graphics/LR_p-z1.jpg" width="400" height="375"></p>
+<p><font face="Arial"><b>7)</b> - Let <b>a = 4</b> in (H<sub>3</sub>)<sup>2</sup>
+to obtain a 3-way allpass crossover</font></p>
+<p><font face="Arial">H<sub>5</sub> = (s<sup>2</sup> - 4s +1)<sup>2</sup> / (s<sup>2</sup>
++ 4s +1)<sup>2</sup>&nbsp; ==&gt; 3-way</font></p>
+<p><font face="Arial">This is an allpass with two real axis poles at -3.73 and
+two at -0.27. It has real axis zeros at +/-3.73 and +/-0.27 which combine to two
+1st order allpasses.&nbsp;</font></p>
+<p><font face="Arial">The numerator of the polynomial is&nbsp; [s<sup>4</sup> -s<sup>2</sup>(a<sup>2</sup>
+- 2) + 1] = s<sup>4</sup> - 14s<sup>2</sup> + 1<br>
+The individual filter functions are:</font></p>
+<p><font face="Arial">HP<sub>5</sub> = s<sup>4</sup> / (s<sup>2</sup> + 4s +1)<sup>2&nbsp;<br>
+</sup>It is 4th order, but has in practice only 12 dB/oct filter slopes because
+the poles are widely spread apart.<sup><br>
+<br>
+</sup>BP<sub>5</sub> = -14s<sup>2</sup> / (s<sup>2</sup> + 4s +1)<sup>2</sup><br>
+The bandpass filter slopes are 12 dB/oct.</font></p>
+<p><font face="Arial">LP<sub>5</sub> = 1 / (s<sup>2</sup> + 4s +1)<sup>2<br>
+</sup>Practical filter slopes are only 12 dB/oct</font></p>
+<p><font face="Arial">Crossover is at -6 dB points and the drivers are in phase
+so there is no tilt in the polar response. The filter slopes should be steeper
+though to make the crossover more realizable.</font></p>
+<p><img border="0" src="images/graphics/Duelnd_p-z1.jpg" width="500" height="120"></p>
+<p><font face="Arial"><b>8)</b> - Squaring (H<sub>3</sub>)<sup>2</sup> once more
+leads to (H<sub>3</sub>)<sup>4</sup> and selecting <b>a = 3</b> gives the
+allpass</font></p>
+<p><font face="Arial">H<sub>6</sub> = (s<sup>2</sup> - 3s +1)<sup>4</sup> / (s<sup>2</sup>
++ 3s +1)<sup>4</sup></font></p>
+<p><font face="Arial">There are 8 poles as calculated from </font><font face="Arial">(s<sup>2</sup>
++ 3s +1)<sup>4</sup></font><font face="Arial">&nbsp; = 0, four at </font><font face="Symbol">s</font><font face="Arial"><sub>p1</sub>
+= -2.62 and four at </font><font face="Symbol">s</font><font face="Arial"><sub>p2</sub>
+= -0.38</font></p>
+<p><font face="Arial">Expanding the numerator yields (s<sup>8</sup> - 14s<sup>6</sup>
++ 51s<sup>4</sup> - 14s<sup>2</sup> + 1) and thus the numerator for the bandpass
+function becomes</font></p>
+<p><font face="Arial">N<sub>BP</sub> = -14s<sup>2</sup> [s<sup>4</sup> -
+(51/14)s<sup>2</sup> +1]&nbsp;&nbsp; with two zeros each at </font><font face="Symbol">s</font><font face="Arial"><sub>z1</sub>
+= -1.83, </font><font face="Symbol">s</font><font face="Arial"><sub>z2</sub> =
+-0.55 and </font><font face="Symbol">s</font><font face="Arial"><sub>z3</sub> =
+0</font></p>
+<p><font face="Arial">The individual filter functions are:</font></p>
+<p><font face="Arial">LP<sub>6</sub> = 1 / [(s + 2.62)<sup>4</sup> (s +0.38)<sup>4</sup>]<br>
+The lowpass is 8th order, but has in practice only 24 dB/oct filter slopes
+because the poles are widely spread apart.</font></p>
+<p><font face="Arial">HP<sub>6</sub> = s<sup>8</sup> / [(s + 2.62)<sup>4</sup>
+(s +0.38)<sup>4</sup>]<sup><br>
+</sup>Highpass<sup> </sup>filter slopes are 24 dB/oct as above.</font></p>
+<p><font face="Arial">BP<sub>6</sub> = -14s<sup>2</sup> (s + 1.83)<sup>2</sup>
+(s + 0.55)<sup>2</sup> / [(s + 2.62)<sup>4</sup> (s +0.38)<sup>4</sup>]<br>
+The bandpass filter slopes are 12 dB/oct. The filter is centered at </font><font face="Symbol">w</font><font face="Arial"><sub>c</sub>
+= 1 and the crossover frequencies are </font><font face="Symbol">w</font><font face="Arial"><sub>1</sub>
+= 0.24 and </font><font face="Symbol">w</font><font face="Arial"><sub>2</sub> =
+4.1 at -6 dB as read from the graph. Thus a 3-way loudspeaker with 120 Hz and
+2.05 kHz crossover frequencies could be built that uses these filter functions.
+The gentle slopes of the bandpass filter function impose stringent requirements
+upon the midrange driver's volume displacement capability and its frequency
+range in order to obtain the targeted acoustic response.</font></p>
+<p><img border="0" src="images/graphics/Duelnd_p-z2.jpg" width="500" height="113"></p>
+<p><font face="Arial"><b>9)</b> - It is interesting to compare this Duelund
+3-way filter function to a crossover that uses LR4 filters. The crossover
+frequencies must be at </font><font face="Symbol">w</font><font face="Arial"><sub>1</sub>
+= 0.24 and </font><font face="Symbol">w</font><font face="Arial"><sub>2</sub> =
+4.1 and thus the LR4 poles are located at&nbsp;</font><font face="Arial"><br>
+0.24*(-0.707 +/- j0.707) and at 4.1*(-0.707 +/- j0.707)&nbsp;</font></p>
+<p><font face="Arial">The filter functions become</font></p>
+<p><font face="Arial">LP<sub>LR4</sub> = 0.24<sup>4</sup> / (s<sup>2</sup> +
+0.34s + 0.24<sup>2</sup>)<sup>2</sup></font></p>
+<p><font face="Arial">BP<sub>LR4</sub> = 4.1<sup>4</sup> s<sup>4</sup> / [(s<sup>2</sup>
++ 0.34s + 0.24<sup>2</sup>)<sup>2 </sup>(s<sup>2</sup> + 5.8s + 4.1<sup>2</sup>)<sup>2</sup>]</font></p>
+<p><font face="Arial">HP<sub>LR4</sub> = s<sup>4</sup> / (s<sup>2</sup> + 5.8s +
+4.1<sup>2</sup>)<sup>2</sup></font></p>
+<p><font face="Arial">The sum of the three filters is approximately allpass
+since the two crossover frequencies are far (1:17) apart.</font></p>
+<p><img border="0" src="images/graphics/Duelnd_3way1.jpg" width="500" height="401"></p>
+<p><font face="Arial">The Duelund filters roll off more gradually through the
+crossover region though highpass and lowpass reach 24 dB/oct slope. The bandpass
+covers a wider frequency range due to its more gradual 12 dB/oct roll-off. The
+group delay of the 3-way also reflects this relative behavior. In particular the
+Duelund does not show any peaking because the allpass filter sections are 1st
+order squared. </font><font face="Arial">Based on my experimentation with 1st
+and 2nd order allpass crossovers this visually smoother response has no audible
+benefits since the amount of peaking is very small.&nbsp;</font></p>
+<p><img border="0" src="images/graphics/Duelnd_3way_tg1.jpg" width="400" height="285"></p>
+<p><font face="Arial">The frequency response curves and the group delay were
+determined in a spreadsheet using the methodology shown in <a href="images/graphics/12db-hpf.gif" target="_blank">12db-hpf.gif</a>.</font></p>
+<p><font face="Arial"><b>10)</b> The Duelund 3-way is based on an 8th order
+polynomial yet the maximum slopes are only 4th order over the first 40 dB of
+attenuation. It seems likely that the same response can be approximated with 4th
+order functions. The good match, which was arrived at by an educated guess, can
+be seen in the graph below.</font></p>
+<p><img border="0" src="images/graphics/Duelnd_3way_aprox1.jpg" width="500" height="365"></p>
+<p><font face="Arial">In the s-plane representation one can see the dominant
+poles taking over and cancellations of several adjacent pole-zero pairs.</font></p>
+<p><img border="0" src="images/graphics/Duelnd_p-z3.jpg" width="500" height="201"></p>
+<p><font face="Arial">Thus a practical Duelund 3-way crossover would have
+parameters like this:</font></p>
+<table border="1" width="100%" cellpadding="20">
+  <tr>
+    <td width="100%"><font face="Arial">a) Crossover frequencies at 0.24 and 4.1
+      (e.g. at 120 Hz and 2050 Hz)<br>
+      Crossover points are at -6 dB.<br>
+      Filter outputs are in phase when the midrange bandpass has reversed
+      polarity.<br>
+      Bandpass is centered at normalized frequency 1.0 (e.g. at 500 Hz).</font>
+      <p><font face="Arial">b) Woofer lowpass&nbsp; LP<sub>D3</sub> = 0.38<sup>4</sup>
+      / ( s + 0.38)<sup>4</sup>&nbsp;<br>
+      Four real axis poles at -0.38 which can be realized with two <a href="filters.htm#2" target="_blank">LR2
+      lowpass filters</a> in cascade (e.g. at 190 Hz).</font></p>
+      <p><font face="Arial">c) Midrange bandpass&nbsp; BP<sub>D3</sub> = -15s<sup>2</sup>
+      / [(s + 0.28)<sup>2</sup> (s + 3.6)<sup>2</sup>]<br>
+      Two zeros at the origin and two poles at -0.28 can be realized with a
+      single <a href="filters.htm#2" target="_blank">LR2 highpass filter</a>
+      (e.g. at 140 Hz).&nbsp;<br>
+      The two poles at -3.6 can be realized with one LR2 lowpass (e.g. at 1800
+      Hz). It is in cascade with the LR2 highpass.</font></p>
+      <p><font face="Arial">d) Tweeter highpass&nbsp; HP<sub>D3</sub> = s<sup>4</sup>
+      / (s + 2.62)<sup>4</sup><br>
+      Four zeros at the origin and four poles at -2.62 can be realized with two
+      LR2 highpass filters in cascade (e.g. at 1310 Hz).&nbsp;</font></td>
+  </tr>
+</table>
+<p><font face="Arial">Note that all mathematical functions are meant to describe
+the acoustic response of a 3-way loudspeaker. To the extend that woofer,
+midrange or tweeter drivers have a non-flat frequency response they must be
+either equalized to be flat, or their response must be made part of the filter
+function. In particular, the midrange driver's natural low frequency roll-off
+could be equalized with a &quot;<a href="filters.htm#9" target="_blank">Linkwitz
+Transform</a>&quot; to obtain the desired LR2 highpass behavior of c) above. The
+tweeter can be treated similarly for two of the poles of d). The woofer's
+natural highpass behavior causes a phase lead which is probably far from zero at
+the first crossover frequency and thus affects the proper addition of woofer and
+midrange outputs. This can be corrected by placing a 1st order allpass in the
+midrange channel which simulates the highpass phase shift of the woofer.</font></p>
+<p><font face="Arial">The Duelund 3-way crossover could provide a useful option
+for building a loudspeaker.</font></p>
+<p><font face="Arial">See also:&nbsp;<br>
+Rene Christensen, &quot;Active All-Pass Crossover Networks with Equal Resistors
+and Equal Capacitors&quot;, Journal of the Audio Engineering Society, Vol. 54,
+No. 1/2, 2006 January/February, pp. 45-53.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p>&nbsp;</p>
+<table border="0" width="90%" cellpadding="10">
+  <tr>
+    <td width="10%" align="center"><a href="IJAETv2n2a2-Linkwitz-1.pdf" target="_blank"><img border="0" src="images/photos/SL-2013.jpg" width="150" height="200"></a></td>
+    <td width="50%">
+      <b><span style="letter-spacing: 1pt"><font color="#808080" face="Arial" size="5">What you hear is not the air pressure
+      variation in itself&nbsp;<br>
+      but what has drawn your attention<br>
+ in the streams of superimposed air
+      pressure variations&nbsp;<br>
+ at your eardrums</font></span></b>
+      <p><b><font
+      face="Arial" size="4" color="#008080"><span style="letter-spacing: 1pt">An
+      acoustic event has dimensions of Time, Tone, Loudness and Space<br>
+      Have they been recorded and rendered sensibly?</span></font></b></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="10%" colspan="2" align="center">
+      <p><b><font face="Arial" color="#ff0000" size="5">___________________________________________________________<br>
+      </font></b><font face="Arial" color="#000000" size="1">Last revised: 08/02/2018
+      &nbsp; -&nbsp; © 1999-2017 LINKWITZ LAB, All Rights Reserved</font>
+      <p>&nbsp;</td>
+  </tr>
+</table>
+
+</td></tr><!--msnavigation--></table><!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 START -->
+<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>
+<script type='text/javascript'><!--
+wm_custnum='98f60a12c56b8f6c';
+wm_page_name='crossovers.htm';
+wm_group_name='/services/webpages/l/i/linkwitzlab.com/public';
+wm_campaign_key='campaign_id';
+wm_track_alt='';
+wiredminds.count();
+// -->
+</script>
+<!-- WiredMinds eMetrics tracking with Enterprise Edition V5.4 END -->
+</body>
+
+</html>
